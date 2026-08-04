@@ -1,1 +1,1 @@
-This is the first project made in the CSC196 class
+This is the project files for the GAT150 class
