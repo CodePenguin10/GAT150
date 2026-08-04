@@ -29,6 +29,7 @@ namespace nu
 		int GetHeight() const { return m_height; }
 
 		friend class Text;
+		friend class Texture;
 
 		private:
 			SDL_Window* m_window = nullptr;
