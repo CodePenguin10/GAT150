@@ -1,0 +1,148 @@
+#include "Engine.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Assets.h"
+#include "Bullet.h"
+#include "SpaceGame.h"
+
+#include <fmod.hpp>
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <memory>
+
+
+using namespace nu;
+
+class Object
+{
+public:
+    Object() { std::cout << "constructor\n"; }
+    ~Object() { std::cout << "destructor\n"; }
+
+    Object(const Object& object) { std::cout << "copy\n"; }
+    Object& operator = (const Object& object) { std::cout << "assignment\n"; return *this; }
+};
+
+int main()
+{
+    std::cout << "=============object=============\n";
+    {
+        Object objectA;
+		Object objectB(objectA);
+		Object objectC;
+		objectC = objectA;
+    }
+
+    std::cout << "=============raw pointers=============\n";
+    {
+        Object* objectA = new Object();
+		std::cout << objectA << std::endl;
+        Object* objectB = new Object(*objectA);
+        std::cout << objectB << std::endl;
+        Object* objectC = nullptr;
+        objectC = objectA;
+        std::cout << objectC << std::endl;
+
+        delete objectA;
+        delete objectB;
+    }
+
+
+    std::cout << "=============smart pointers=============\n";
+    {
+		std::unique_ptr<Object> objectA = std::make_unique<Object>();
+        std::cout << objectA.get() << std::endl;
+        std::unique_ptr<Object> objectB = std::make_unique<Object>();
+		objectB = std::move(objectA);
+        std::cout << objectB.get() << std::endl;
+
+        objectB.reset();
+    }
+
+    // INITILALIZATION
+    Engine::Get().Initialize();
+
+    SpaceGame game;
+    game.Initialize();
+    
+
+    // mesh / model
+    std::vector<Vector2> points;
+
+    FMOD::Sound* sound = nullptr;
+
+    // MAIN LOOP
+    bool quit = false;
+
+    while (!quit) 
+    {
+        // UPDATE
+        SDL_Event event;
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_EVENT_QUIT) {
+                quit = true;
+            }
+            if (event.type == SDL_EVENT_KEY_DOWN && event.key.scancode == SDL_SCANCODE_ESCAPE) {
+                quit = true;
+			}
+        }
+
+
+        // ENGINE
+        Engine::Get().Update();
+        float dt = Engine::Get().GetTime().GetDeltaTime();
+
+        game.Update(dt);
+
+        if (Engine::Get().GetInput().GetButtonDown(Input::MouseButtons::Left))
+        {
+            if (points.empty()) 
+            {
+				points.push_back(Engine::Get().GetInput().GetMousePosition());
+            }
+            else
+            { 
+                Vector2 v = points.back() - Engine::Get().GetInput().GetMousePosition();
+
+                if (v.Length() > 10.0f)
+                {
+                    points.push_back(Engine::Get().GetInput().GetMousePosition());
+                }
+            }
+            
+        }
+
+        //Undo
+        if (Engine::Get().GetInput().GetButtonPressed(Input::MouseButtons::Right))
+        {
+            if (points.empty()) {
+                points.pop_back();
+            }
+		}
+		
+
+        // RENDER
+        Engine::Get().GetRenderer().SetColor(0.0f, 0.0f, 0.0f);
+		Engine::Get().GetRenderer().Clear();
+
+        for (size_t i = 0; i + 1 < points.size(); i++)
+        {
+			Engine::Get().GetRenderer().SetColor(0.0f, 255.0f, 255.0f);
+			Engine::Get().GetRenderer().DrawLine(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
+        }
+
+        game.Draw(Engine::Get().GetRenderer());
+
+        Engine::Get().GetPS().Draw(Engine::Get().GetRenderer());
+
+        // CHARACTER
+	    Engine::Get().GetRenderer().Present();
+    }
+
+    // SHUTDOWN
+    Engine::Get().Shutdown();
+
+    return 0;
+}
