@@ -118,7 +118,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sdl3_ttf.lib;sdl3.lib;sdl3_ttf.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdl3.lib;sdl3_ttf.lib;sdl3_image.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -136,7 +136,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sdl3_ttf.lib;sdl3.lib;sdl3_ttf.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdl3.lib;sdl3_ttf.lib;sdl3_image.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -152,7 +152,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>sdl3.lib;%(AdditionalDependencies);sdl3_ttf.lib;sdl3.lib;sdl3_ttf.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdl3.lib;sdl3_ttf.lib;sdl3_image.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Source\ThirdParty\SDL3\lib\$(PlatformTarget);%(AdditionalLibraryDirectories);$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -170,7 +170,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);sdl3_ttf.lib;sdl3.lib;sdl3_ttf.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib</AdditionalDependencies>
+      <AdditionalDependencies>sdl3.lib;sdl3_ttf.lib;sdl3_image.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
