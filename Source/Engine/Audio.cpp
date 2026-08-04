@@ -31,8 +31,8 @@ namespace nu
 		CheckFMODResult(m_fmodSystem->update());
 	}
 
-	//bool Audio::AddSound(const std::string& name, const std::string& filename)
-	//{
+	bool Audio::AddSound(const std::string& name, const std::string& filename)
+	{
 	//	// check if key exists in sounds map
 	//	if (/*TODO: check if name already exists in m_sounds*/)
 	//	{
@@ -49,8 +49,8 @@ namespace nu
 	//	// insert sound into map
 	//	//TODO: add sound to m_sounds using name as key
 
-	//	return true;
-	//}
+		return true;
+	}
 
 	bool Audio::PlaySound(const std::string& name, bool loop)
 	{

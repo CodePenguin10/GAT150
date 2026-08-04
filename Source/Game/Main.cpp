@@ -27,6 +27,7 @@ public:
 
 int main()
 {
+
     std::cout << "=============object=============\n";
     {
         Object objectA;
@@ -50,7 +51,7 @@ int main()
     }
 
 
-    std::cout << "=============smart pointers=============\n";
+    std::cout << "=============unique pointers=============\n";
     {
 		std::unique_ptr<Object> objectA = std::make_unique<Object>();
         std::cout << objectA.get() << std::endl;
@@ -60,6 +61,21 @@ int main()
 
         objectB.reset();
     }
+
+    std::cout << "=============shared pointers=============\n";
+	std::shared_ptr<Object> objectC;
+    {
+        auto objectA = std::make_shared<Object>();
+		std::cout << objectA.get() << std::endl;
+		std::cout << objectA.use_count() << std::endl;
+        auto objectB = objectA;
+        std::cout << objectB.get() << std::endl;
+        std::cout << objectB.use_count() << std::endl;
+        objectC = objectA;
+        std::cout << objectC.get() << std::endl;
+        std::cout << objectC.use_count() << std::endl;
+    }
+    std::cout << objectC.use_count() << std::endl;
 
     // INITILALIZATION
     Engine::Get().Initialize();
