@@ -101,7 +101,8 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64;fmod_vc.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib;fmod_vc.lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmod_vc.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,7 +122,8 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64;fmod_vc.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib;fmod_vc.lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmod_vc.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,7 +132,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Source\ThirdParty\SDL3\include;%(AdditionalIncludeDirectories);$(SolutionDir)ThirdParty\fmod\core\inc;C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Source\ThirdParty\SDL3\include;%(AdditionalIncludeDirectories);$(SolutionDir)Source\ThirdParty\fmod\core\inc</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -140,7 +142,8 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>$(SolutionDir)Source\ThirdParty\SDL3\lib\$(PlatformTarget);%(AdditionalLibraryDirectories);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64;fmod_vc.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib;fmod_vc.lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmod_vc.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,7 +163,8 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>;$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64;fmod_vc.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib;fmod_vc.lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>fmod_vc.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
