@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Assets.h"
+#include <memory>
 
 bool SpaceGame::Initialize()
 {
@@ -11,23 +12,23 @@ bool SpaceGame::Initialize()
 	m_scene = new nu::Scene();
 	m_scene->SetGame(this);
 
-	m_titleFont = new nu::Font();
+	m_titleFont = std::make_shared<nu::Font>();
 	m_titleFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
 
 	m_titleText = new nu::Text(m_titleFont);
 	m_titleText->Create(nu::Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
 
-	m_gameFont = new nu::Font();
+	m_gameFont = std::make_shared<nu::Font>();
 	m_gameFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
 
 	m_gameText = new nu::Text(m_gameFont);
 
-	m_scoreFont = new nu::Font();
+	m_scoreFont = std::make_shared<nu::Font>();
 	m_scoreFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
 
 	m_scoreText = new nu::Text(m_scoreFont);
 
-	m_livesFont = new nu::Font();
+	m_livesFont = std::make_shared<nu::Font>();
 	m_livesFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
 
 	m_livesText = new nu::Text(m_livesFont);
