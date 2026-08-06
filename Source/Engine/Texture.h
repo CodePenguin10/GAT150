@@ -1,12 +1,15 @@
 #pragma once
+
 #include "Vector2.h"
+#include "Resource.h"
+
 #include <string>
 
 struct SDL_Texture;
 
 namespace nu
 {
-	class Texture
+	class Texture : public Resource
 	{
 	public:
 		Texture() = default;

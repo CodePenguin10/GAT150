@@ -11,6 +11,7 @@
 #include <vector>
 #include <map>
 #include <memory>
+#include <random>
 
 
 using namespace nu;
@@ -25,57 +26,63 @@ public:
     Object& operator = (const Object& object) { std::cout << "assignment\n"; return *this; }
 };
 
+uint32_t seed = 1234;
+
+uint32_t RNG()
+{
+    seed = (seed * 1103515245) + 12345;
+    return seed;
+}
+
 int main()
 {
-
-    std::cout << "=============object=============\n";
+    //rand()
+    for (size_t i = 0; i < 10; i++)
     {
-        Object objectA;
-		Object objectB(objectA);
-		Object objectC;
-		objectC = objectA;
+        std::cout << RNG() << " ";
     }
 
-    std::cout << "=============raw pointers=============\n";
-    {
-        Object* objectA = new Object();
-		std::cout << objectA << std::endl;
-        Object* objectB = new Object(*objectA);
-        std::cout << objectB << std::endl;
-        Object* objectC = nullptr;
-        objectC = objectA;
-        std::cout << objectC << std::endl;
+    std::cout << std::endl;
+    seed = 1234;
 
-        delete objectA;
-        delete objectB;
+    for (size_t i = 0; i < 10; i++)
+    {
+        std::cout << RNG() << " ";
     }
 
+    std::cout << std::endl;
+    //srand((unsigned int)time(NULL));
+	SeedRandom((unsigned int)time(NULL)); //-> srand((unsigned int)time(NULL));
 
-    std::cout << "=============unique pointers=============\n";
+    for (size_t i = 0; i < 10; i++)
     {
-		std::unique_ptr<Object> objectA = std::make_unique<Object>();
-        std::cout << objectA.get() << std::endl;
-        std::unique_ptr<Object> objectB = std::make_unique<Object>();
-		objectB = std::move(objectA);
-        std::cout << objectB.get() << std::endl;
+        std::cout << rand() << " ";
+    }
+    std::cout << std::endl;
+  
 
-        objectB.reset();
+    // random<>
+    std::random_device randomdevice;
+    std::cout << randomdevice.min() << std::endl;
+    std::cout << randomdevice.max() << std::endl;
+    std::cout << randomdevice.entropy() << std::endl;
+
+    std::mt19937 generator(randomdevice());
+    std::uniform_int_distribution<> dist(0, 20);
+    for (size_t i = 0; i < 10; i++)
+    {
+        std::cout << dist(generator) << " ";
     }
 
-    std::cout << "=============shared pointers=============\n";
-	std::shared_ptr<Object> objectC;
+    std::cout << std::endl;
+
+    std::uniform_real_distribution<float> distReal(-10.0f, 20.0f);
+    for (size_t i = 0; i < 10; i++)
     {
-        auto objectA = std::make_shared<Object>();
-		std::cout << objectA.get() << std::endl;
-		std::cout << objectA.use_count() << std::endl;
-        auto objectB = objectA;
-        std::cout << objectB.get() << std::endl;
-        std::cout << objectB.use_count() << std::endl;
-        objectC = objectA;
-        std::cout << objectC.get() << std::endl;
-        std::cout << objectC.use_count() << std::endl;
+        std::cout << distReal(generator) << " ";
     }
-    std::cout << objectC.use_count() << std::endl;
+
+    return 0;
 
     // INITILALIZATION
     Engine::Get().Initialize();
@@ -86,6 +93,9 @@ int main()
     // create texture, using shared_ptr so texture can be shared
     std::shared_ptr<Texture> texture = std::make_shared<Texture>();
     texture->Load("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
+
+    auto texture = Resources().Get<Texture>("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
+    Engine::Get().GetRenderer().DrawTexture(*texture, 30, 30, 23.0f, 2.0f);
     
 
     // mesh / model
