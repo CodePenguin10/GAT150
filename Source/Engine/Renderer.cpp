@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "Model.h"
 #include "MathUtility.h"
+#include "Texture.h"
 
 #include <iostream>
 #include "Input.h"

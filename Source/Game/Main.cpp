@@ -82,6 +82,10 @@ int main()
 
     SpaceGame game;
     game.Initialize();
+
+    // create texture, using shared_ptr so texture can be shared
+    std::shared_ptr<Texture> texture = std::make_shared<Texture>();
+    texture->Load("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
     
 
     // mesh / model
@@ -91,6 +95,8 @@ int main()
 
     // MAIN LOOP
     bool quit = false;
+
+ 
 
     while (!quit) 
     {
@@ -142,6 +148,9 @@ int main()
         // RENDER
         Engine::Get().GetRenderer().SetColor(0.0f, 0.0f, 0.0f);
 		Engine::Get().GetRenderer().Clear();
+
+		Engine::Get().GetRenderer().DrawTexture(*texture, 30, 30);
+        // TODO:: get engine renderer.DrawTexture(...get() texture pointer..., 30, 30);
 
         for (size_t i = 0; i + 1 < points.size(); i++)
         {
