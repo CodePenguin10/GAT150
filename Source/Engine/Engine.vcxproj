@@ -141,7 +141,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)Source\ThirdParty\SDL3\lib\$(PlatformTarget);%(AdditionalLibraryDirectories);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64;fmod_vc.lib;$(SolutionDir)ThirdParty\SDL3\lib\$(PlatformTarget);sdl3_image.lib;fmod_vc.lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Source\ThirdParty\SDL3\lib\$(PlatformTarget);%(AdditionalLibraryDirectories);$(SolutionDir)ThirdParty\fmod\core\lib\$(PlatformTarget);C:\Neumont\CSC196\GameEngine\Source\ThirdParty\fmod\core\lib\x64</AdditionalLibraryDirectories>
       <AdditionalDependencies>
       </AdditionalDependencies>
     </Lib>
