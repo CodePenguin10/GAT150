@@ -6,6 +6,7 @@
 #include <memory>
 #include <map>
 #include <string>
+#include <iostream>
 
 namespace nu
 {
@@ -34,7 +35,32 @@ namespace nu
 		requires std::derived_from<T, Resource>
 	inline res_t<T> ResourceManager::Get(const std::string& name, Args&& ... args)
 	{
-		return GetWithID<T>(name, name, std::forward<Args>(args)...);
+		auto iter = m_resources.find(name);
+
+		// check if resource exists
+		if (iter != m_resources.end())
+		{
+			auto base = iter->second;
+			auto resource = std::dynamic_pointer_cast<T>(base);
+
+			if (resource == nullptr)
+			{
+				std::cerr << "Resource type mismatch: " << name << std::endl;
+				return res_t<T>();
+			}
+
+			return resource;
+		}
+
+		// resource doesn't exist, create and load
+		res_t<T> resource = std::make_shared<T>();
+		if (!resource->Load(name, std::forward<Args>(args)...))
+		{
+			std::cerr << "Could not load resource: " << name << std::endl;
+			return res_t<T>();
+		}
+
+		return resource;
 	}
 
 	template<typename T, typename ...Args>

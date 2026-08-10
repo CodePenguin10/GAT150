@@ -5,33 +5,20 @@
 #include "Assets.h"
 #include <memory>
 
+using namespace nu;
+
 bool SpaceGame::Initialize()
 {
 	Game::Initialize();
 
-	m_scene = new nu::Scene();
+	m_scene = new Scene();
 	m_scene->SetGame(this);
 
-	m_titleFont = new nu::Font();
-	m_titleFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
+	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "assets/fonts/Private Teacher.ttf", 128.0f));
+	m_titleText->Create(Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
 
-	m_titleText = new nu::Text(m_titleFont);
-	m_titleText->Create(nu::Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
-
-	m_gameFont = new nu::Font();
-	m_gameFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
-
-	m_gameText = new nu::Text(m_gameFont);
-
-	m_scoreFont = new nu::Font();
-	m_scoreFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
-
-	m_scoreText = new nu::Text(m_scoreFont);
-
-	m_livesFont = new nu::Font();
-	m_livesFont->Load("assets/fonts/Private Teacher.ttf", 50.0f);
-
-	m_livesText = new nu::Text(m_livesFont);
+	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "assets/fonts/Private Teacher.ttf", 32.0f));
+	m_livesText = new Text(Resources().Get<Font>("game_font", 32.0f));
 
 
 

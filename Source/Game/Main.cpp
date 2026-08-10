@@ -91,23 +91,11 @@ int main()
     game.Initialize();
 
     // create texture, using shared_ptr so texture can be shared
-    std::shared_ptr<Texture> texture = std::make_shared<Texture>();
-    texture->Load("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
-
-    auto texture = Resources().Get<Texture>("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
-    Engine::Get().GetRenderer().DrawTexture(*texture, 30, 30, 23.0f, 2.0f);
-    
-
-    // mesh / model
-    std::vector<Vector2> points;
-
-    FMOD::Sound* sound = nullptr;
-
+    //std::shared_ptr<Texture> texture = std::make_shared<Texture>();
+    //texture->Load("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
+   
     // MAIN LOOP
     bool quit = false;
-
- 
-
     while (!quit) 
     {
         // UPDATE
@@ -126,47 +114,15 @@ int main()
         Engine::Get().Update();
         float dt = Engine::Get().GetTime().GetDeltaTime();
 
+        // GAME
         game.Update(dt);
-
-        if (Engine::Get().GetInput().GetButtonDown(Input::MouseButtons::Left))
-        {
-            if (points.empty()) 
-            {
-				points.push_back(Engine::Get().GetInput().GetMousePosition());
-            }
-            else
-            { 
-                Vector2 v = points.back() - Engine::Get().GetInput().GetMousePosition();
-
-                if (v.Length() > 10.0f)
-                {
-                    points.push_back(Engine::Get().GetInput().GetMousePosition());
-                }
-            }
-            
-        }
-
-        //Undo
-        if (Engine::Get().GetInput().GetButtonPressed(Input::MouseButtons::Right))
-        {
-            if (points.empty()) {
-                points.pop_back();
-            }
-		}
 		
 
         // RENDER
         Engine::Get().GetRenderer().SetColor(0.0f, 0.0f, 0.0f);
 		Engine::Get().GetRenderer().Clear();
 
-		Engine::Get().GetRenderer().DrawTexture(*texture, 30, 30);
-        // TODO:: get engine renderer.DrawTexture(...get() texture pointer..., 30, 30);
-
-        for (size_t i = 0; i + 1 < points.size(); i++)
-        {
-			Engine::Get().GetRenderer().SetColor(0.0f, 255.0f, 255.0f);
-			Engine::Get().GetRenderer().DrawLine(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y);
-        }
+		Engine::Get().GetRenderer().DrawTexture(*Resources().Get<Texture>("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer()), 30, 30);
 
         game.Draw(Engine::Get().GetRenderer());
 
