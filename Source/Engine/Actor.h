@@ -20,8 +20,8 @@ namespace nu
         Vector2 velocity{ 0.0f, 0.0f };
         float damping{ 0.0f };
         float lifespan{ 0.0f };
-        std::shared_ptr<Model> model;
-		std::shared_ptr<Texture> texture;
+        res_t<Model> model;
+		res_t<Texture> texture;
     };
 
     class Actor

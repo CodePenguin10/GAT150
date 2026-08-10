@@ -32,7 +32,7 @@ namespace nu
 
         if (m_texture)
         {
-            renderer.DrawTexture(*m_texture, m_transform.position.x, m_transform.position.y, m_transform.rotation, m_transform.scale, false);
+            renderer.DrawTexture(*m_texture, m_transform.position.x, m_transform.position.y, m_transform.rotation, m_transform.scale);
         }
     }
 

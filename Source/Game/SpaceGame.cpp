@@ -124,9 +124,9 @@ void SpaceGame::SpawnPlayer()
 	PlayerDesc playerDesc;
 	playerDesc.name = "Player";
 	playerDesc.tag = "Player";
-	playerDesc.model = assets::playerModel;
+	//playerDesc.model = assets::playerModel;
 	playerDesc.texture = Resources().Get<Texture>("assets/textures/player.png", Engine::Get().GetRenderer());
-	playerDesc.transform = nu::Transform{ nu::Vector2{ 640.0f, 512.0f }, 0.0f, 25.0f };
+	playerDesc.transform = nu::Transform{ nu::Vector2{ 640.0f, 512.0f }, 0.0f, 1.0f };
 	playerDesc.damping = 0.75f;
 	playerDesc.speed = 750.0f;
 
