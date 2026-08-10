@@ -31,7 +31,7 @@ namespace nu
 	/// <returns>Random number between 0 and max (exclusive)</returns>
 	inline int RandomInt(int max)
 	{
-		static std::uniform_int_distribution<> dist(0, max - 1);
+		std::uniform_int_distribution<> dist(0, max - 1);
 		return dist(Generator);
 	}
 
@@ -48,7 +48,7 @@ namespace nu
 			std::swap(min, max);
 		}
 
-		static std::uniform_int_distribution<> dist(min, max);
+		std::uniform_int_distribution<> dist(min, max);
 		return dist(Generator);
 	}
 
@@ -60,7 +60,7 @@ namespace nu
 
 	inline float RandomFloat(float max)
 	{
-		static std::uniform_real_distribution<float> dist(0.0f, max);
+		std::uniform_real_distribution<float> dist(0.0f, max);
 		return dist(Generator);
 	}
 
@@ -74,5 +74,4 @@ namespace nu
 		std::uniform_real_distribution<float> dist(min, max);
 		return dist(Generator);
 	}
-
 }

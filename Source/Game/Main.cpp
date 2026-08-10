@@ -36,52 +36,7 @@ uint32_t RNG()
 
 int main()
 {
-    //rand()
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::cout << RNG() << " ";
-    }
-
-    std::cout << std::endl;
-    seed = 1234;
-
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::cout << RNG() << " ";
-    }
-
-    std::cout << std::endl;
-    //srand((unsigned int)time(NULL));
-	SeedRandom((unsigned int)time(NULL)); //-> srand((unsigned int)time(NULL));
-
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::cout << rand() << " ";
-    }
-    std::cout << std::endl;
   
-
-    // random<>
-    std::random_device randomdevice;
-    std::cout << randomdevice.min() << std::endl;
-    std::cout << randomdevice.max() << std::endl;
-    std::cout << randomdevice.entropy() << std::endl;
-
-    std::mt19937 generator(randomdevice());
-    std::uniform_int_distribution<> dist(0, 20);
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::cout << dist(generator) << " ";
-    }
-
-    std::cout << std::endl;
-
-    std::uniform_real_distribution<float> distReal(-10.0f, 20.0f);
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::cout << distReal(generator) << " ";
-    }
-
     return 0;
 
     // INITILALIZATION
@@ -90,10 +45,6 @@ int main()
     SpaceGame game;
     game.Initialize();
 
-    // create texture, using shared_ptr so texture can be shared
-    //std::shared_ptr<Texture> texture = std::make_shared<Texture>();
-    //texture->Load("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer());
-   
     // MAIN LOOP
     bool quit = false;
     while (!quit) 
