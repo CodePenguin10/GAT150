@@ -5,7 +5,7 @@
 
 namespace nu
 {
-	inline std::mt19937 Generator()
+	inline std::mt19937& Generator()
 	{
 		static std::random_device randomDevice;
 		static std::mt19937 generator(randomDevice());
@@ -21,7 +21,7 @@ namespace nu
 	inline int RandomInt()
 	{
 		static std::uniform_int_distribution<> dist;
-		return dist(Generator);
+		return dist(Generator());
 	}
 
 	/// <summary>
@@ -32,7 +32,7 @@ namespace nu
 	inline int RandomInt(int max)
 	{
 		std::uniform_int_distribution<> dist(0, max - 1);
-		return dist(Generator);
+		return dist(Generator());
 	}
 
 	/// <summary>
@@ -49,19 +49,19 @@ namespace nu
 		}
 
 		std::uniform_int_distribution<> dist(min, max);
-		return dist(Generator);
+		return dist(Generator());
 	}
 
 	inline float RandomFloat()
 	{
 		static std::uniform_real_distribution<float> dist(0.0f, 1.0f);
-		return dist(Generator);
+		return dist(Generator());
 	}
 
 	inline float RandomFloat(float max)
 	{
 		std::uniform_real_distribution<float> dist(0.0f, max);
-		return dist(Generator);
+		return dist(Generator());
 	}
 
 	inline float RandomFloat(float min, float max)
@@ -72,6 +72,6 @@ namespace nu
 		}
 
 		std::uniform_real_distribution<float> dist(min, max);
-		return dist(Generator);
+		return dist(Generator());
 	}
 }

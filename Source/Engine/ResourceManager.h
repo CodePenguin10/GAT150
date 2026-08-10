@@ -36,7 +36,6 @@ namespace nu
 	inline res_t<T> ResourceManager::Get(const std::string& name, Args&& ... args)
 	{
 		auto iter = m_resources.find(name);
-
 		// check if resource exists
 		if (iter != m_resources.end())
 		{

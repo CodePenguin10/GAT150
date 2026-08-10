@@ -12,33 +12,12 @@
 #include <map>
 #include <memory>
 #include <random>
-
+#include <fstream>
 
 using namespace nu;
 
-class Object
-{
-public:
-    Object() { std::cout << "constructor\n"; }
-    ~Object() { std::cout << "destructor\n"; }
-
-    Object(const Object& object) { std::cout << "copy\n"; }
-    Object& operator = (const Object& object) { std::cout << "assignment\n"; return *this; }
-};
-
-uint32_t seed = 1234;
-
-uint32_t RNG()
-{
-    seed = (seed * 1103515245) + 12345;
-    return seed;
-}
-
 int main()
 {
-  
-    return 0;
-
     // INITILALIZATION
     Engine::Get().Initialize();
 
@@ -73,13 +52,9 @@ int main()
         Engine::Get().GetRenderer().SetColor(0.0f, 0.0f, 0.0f);
 		Engine::Get().GetRenderer().Clear();
 
-		Engine::Get().GetRenderer().DrawTexture(*Resources().Get<Texture>("assets/textures/JimmySnowgrave.png", Engine::Get().GetRenderer()), 30, 30);
-
         game.Draw(Engine::Get().GetRenderer());
-
         Engine::Get().GetPS().Draw(Engine::Get().GetRenderer());
 
-        // CHARACTER
 	    Engine::Get().GetRenderer().Present();
     }
 
