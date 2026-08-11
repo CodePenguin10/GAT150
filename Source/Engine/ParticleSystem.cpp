@@ -45,9 +45,7 @@ namespace nu
 			{
 				// set particle color and draw point at current position
 				renderer.SetColor(particle.color.r, particle.color.g, particle.color.b);
-				// TODO: set color with particle color
 				renderer.DrawPoint(particle.position.x, particle.position.y);
-				// TODO: draw point with particle position
 			}
 		}
 	}

@@ -7,8 +7,12 @@
 #include "Transform.h"
 #include "Mesh.h"
 #include "Model.h"
+#include "StringUtility.h"
+
 #include "Text.h"
 #include "Texture.h"
+
+#include "Factory.h"
 
 //Systems
 #include "Renderer.h"
