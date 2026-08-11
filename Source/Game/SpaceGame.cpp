@@ -126,7 +126,6 @@ void SpaceGame::SpawnPlayer()
 	PlayerDesc playerDesc;
 	playerDesc.name = "Player";
 	playerDesc.tag = "Player";
-	//playerDesc.model = assets::playerModel;
 	playerDesc.texture = Resources().Get<Texture>("assets/textures/player.png", Engine::Get().GetRenderer());
 	playerDesc.transform = nu::Transform{ nu::Vector2{ 640.0f, 512.0f }, 0.0f, 1.0f };
 	playerDesc.damping = 0.75f;
@@ -141,8 +140,8 @@ void SpaceGame::SpawnEnemy()
 	EnemyDesc enemyDesc;
 	enemyDesc.name = "Enemy";
 	enemyDesc.tag = "Enemy";
-	enemyDesc.model = assets::enemyModel;
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 25.0f };
+	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Fast_enemy.png", Engine::Get().GetRenderer());
+	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
 	enemyDesc.damping = 0.75f;
 	enemyDesc.health = 1.0f;
 	enemyDesc.speed = nu::RandomFloat(700.0f, 850.0f);
@@ -155,8 +154,8 @@ void SpaceGame::SpawnEnemy2()
 	EnemyDesc enemyDesc;
 	enemyDesc.name = "Enemy2";
 	enemyDesc.tag = "Enemy2";
-	enemyDesc.model = assets::enemyModel2;
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 25.0f };
+	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Normal_enemy.png", Engine::Get().GetRenderer());
+	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
 	enemyDesc.damping = 0.75f;
 	enemyDesc.health = 2.0f;
 	enemyDesc.speed = nu::RandomFloat(600.0f, 750.0f);
@@ -169,8 +168,8 @@ void SpaceGame::SpawnEnemy3()
 	EnemyDesc enemyDesc;
 	enemyDesc.name = "Enemy3";
 	enemyDesc.tag = "Enemy3";
-	enemyDesc.model = assets::enemyModel3;
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 25.0f };
+	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Slow_enemy.png", Engine::Get().GetRenderer());
+	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
 	enemyDesc.damping = 0.75f;
 	enemyDesc.health = 3.0f;
 	enemyDesc.speed = nu::RandomFloat(500.0f, 650.0f);

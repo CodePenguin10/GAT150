@@ -45,9 +45,9 @@ void Player::Update(float dt)
 		BulletDesc Desc;
 		Desc.name = "Bullet";
 		Desc.tag = "Friendly_Bullet";
-		Desc.model = assets::bulletModel;
+		Desc.texture = Resources().Get<Texture>("assets/textures/Bullet.png", Engine::Get().GetRenderer());
 		Desc.transform = m_transform;
-		Desc.transform.scale = 5.0f;
+		Desc.transform.scale = 2.0f;
 		Desc.speed = 1500.0f;
 		Desc.lifespan = 1.5f;
 
