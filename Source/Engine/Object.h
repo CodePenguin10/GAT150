@@ -1,4 +1,5 @@
 #pragma once
+#include "Json.h"
 #include <string>
 
 namespace nu
@@ -12,6 +13,8 @@ namespace nu
 		const std::string& GetName() const { return m_name; }
 		bool IsActive() const { return m_active; }
 		void SetActive(bool active = true) { m_active = active; }
+
+
 
 	protected:
 		std::string m_name;

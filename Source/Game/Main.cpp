@@ -16,105 +16,15 @@
 
 using namespace nu;
 
-class Animal
-{
-public:
-    virtual void Speak() { std::cout << "???"; }
-};
-
-class Cat : public Animal
-{
-    void Speak() override { std::cout << "Meow"; }
-};
-
-class Dog : public Animal
-{
-    void Speak() override { std::cout << "Woof"; }
-};
-
-class Bird : public Animal
-{
-    void Speak() override { std::cout << "EY! I'M FLYING ERE'"; }
-};
-
-/*
-enum class Type
-{
-    Cat = 1,
-    Dog,
-    Bird
-};
-
-Animal* AnimalFactory(Type id)
-{
-    Animal* animal = nullptr;
-
-    switch (id)
-    {
-    case Type::Cat:
-        animal = new Cat();
-        break;
-    case Type::Dog:
-        animal = new Dog();
-        break;
-    case Type::Bird:
-        animal = new Bird();
-        break;
-    default:
-        break;
-    }
-
-    return animal;
-}
-
-*/
-
-Animal* AnimalFactory(const std::string& id)
-{
-    Animal* animal = nullptr;
-
-    if (nu::ToLower(id) == "cat") animal = new Cat;
-    else if (nu::EqualsIgnoreCase(id, "dog")) animal = new Dog;
-    else if (id == "bird") animal = new Bird;
-    return animal;
-}
-
-//class Icreator
-//{
-//public:
-//    virtual ~Icreator() = default;
-//    virtual std::unique_ptr<Animal> Create() = 0;
-//};
-//
-//template <typename T>
-//class Creator : public Icreator
-//{
-//public:
-//    std::unique_ptr<Animal> Create() override { return std::make_unique<T>(); }
-//};
-//
-//std::map<std::string, std::unique_ptr<Icreator>> registry;
-
 int main()
 {
+    // Register the actor, adding it to the m_registry map
     Factory::Instance().Register<Actor>("Actor");
+
+    // Create the acotr, giving it a name that can be used to call the actor's functions
     auto actor = Factory::Instance().Create<Actor>("Actor");
     std::cout << actor->IsActive() << std::endl;
-
-    /*registry["Cat"] = std::make_unique<Creator<Cat>>();
-    registry["Dog"] = std::make_unique<Creator<Dog>>();
-    registry["Bird"] = std::make_unique<Creator<Bird>>();
-
-    auto animal = registry["Bird"]->Create();
-    animal->Speak();*/
-
-
-    /*std::string selection;
-    std::cout << "Select Aniaml: ";
-    std::cin >> selection;
-
-    auto animal = AnimalFactory(selection);
-    if (animal) animal->Speak();*/
+    std::cout << actor->GetRadius() << std::endl;
 
     return 0;
 

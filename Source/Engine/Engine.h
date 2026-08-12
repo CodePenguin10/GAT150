@@ -8,6 +8,7 @@
 #include "Mesh.h"
 #include "Model.h"
 #include "StringUtility.h"
+#include "Json.h"
 
 #include "Text.h"
 #include "Texture.h"

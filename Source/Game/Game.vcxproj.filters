@@ -8,6 +8,9 @@
     <Filter Include="Header Files">
       <UniqueIdentifier>{77661e0e-c5c7-4276-8ca9-9a0db009bd44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{010126b6-d93c-4484-9bcb-cd3b11c15469}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -45,5 +48,10 @@
     <ClInclude Include="SpaceGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Build\Assets\Data\scene.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

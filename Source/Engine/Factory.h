@@ -53,7 +53,7 @@ namespace nu
             return;
         }
 
-        m_registry[name] = std::make_unique<Creator<T>>();
+        m_registry[lowerName] = std::make_unique<Creator<T>>();
     }
 
     template<typename T>
@@ -70,7 +70,6 @@ namespace nu
 
         auto iter = m_registry.find(lowerName);
 
-        //auto creator = m_registry[lowerName];
         // create unique ptr to object
         auto object = iter->second->Create();
 
