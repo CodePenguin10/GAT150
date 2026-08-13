@@ -39,6 +39,7 @@
     <ClInclude Include="SpaceGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Build\Assets\Data\data.json" />
     <None Include="..\..\Build\Assets\Data\scene.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -53,5 +53,8 @@
     <None Include="..\..\Build\Assets\Data\scene.json">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="..\..\Build\Assets\Data\data.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
