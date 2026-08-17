@@ -6,6 +6,7 @@
 
 #include <iostream>
 
+FACTORY_REGISTER(Enemy)
 
 using namespace nu;
 

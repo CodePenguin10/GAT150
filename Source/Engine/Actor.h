@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "Model.h"
 #include "Resource.h"
+#include "Framework/Component.h"
 
 #include <string>
 #include <memory>
@@ -67,8 +68,11 @@ namespace nu
         float m_lifespan{ 0.0f };
         bool m_destroyed{ false };
 
+        //Delete these later
         res_t<Model> m_model;
         res_t<Texture> m_texture;
+        //
+        std::vector<Component*> m_components;
 
         Scene* m_scene = nullptr;
     };

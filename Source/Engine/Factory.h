@@ -8,6 +8,17 @@
 #include <memory>
 #include <map>
 
+#define FACTORY_REGISTER(classname) \
+    class Register##classname       \
+    {                               \
+        public:                     \
+            Register##classname()   \
+            {                       \
+                nu::Factory::Instance().Register<classname>(#classname); \
+            }                        \
+    };                               \
+    static Register##classname registerinstance;
+
 namespace nu
 {
     class Icreator
@@ -53,6 +64,8 @@ namespace nu
             return;
         }
 
+        std::cout << "Object registered: " << name << std::endl;
+
         m_registry[lowerName] = std::make_unique<Creator<T>>();
     }
 
@@ -75,6 +88,7 @@ namespace nu
 
         // check if object is derived from T
         T* derived = dynamic_cast<T*>(object.get());
+
         if (derived)
         {
             // release unique ptr ownership

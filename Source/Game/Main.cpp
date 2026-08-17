@@ -6,7 +6,6 @@
 #include "SpaceGame.h"
 
 #include <fmod.hpp>
-
 #include <iostream>
 #include <vector>
 #include <map>
@@ -18,51 +17,30 @@ using namespace nu;
 
 int main()
 {
-    // load the json data from a file
-    std::string buffer;
-    if (ReadTextFile("assets/data/data.json", buffer))
-    {
-        // show the contents of the json file (debug)
-        std::cout << buffer << std::endl;
-
-        // create json document from the json file contents
-        rapidjson::Document document;
-        if (json::Load("assets/data/data.json", document))
-        {
-            std::string name;
-            int age;
-            float speed;
-            bool isAwake;
-            Vector2 position;
-            Vector3 color;
-
-            // read the json data
-            JSON_READ(document, name);
-            JSON_READ(document, age);
-            JSON_READ(document, speed);
-            JSON_READ(document, isAwake);
-            JSON_READ(document, position);
-            JSON_READ(document, color);
-
-            // show the data
-            std::cout << name << " " << age << " " << speed << " " << isAwake << std::endl;
-            std::cout << position.x << " " << position.y << std::endl;
-            std::cout << color.r << " " << color.g << " " << color.b << " " << std::endl;
-
-        }
-    }
+    //CAN'T TOUCH THIS
 
     // read/show the data from the json file
 
     //--------------------------------------------------------------------------------------------------------
 
-    //// Register the actor, adding it to the m_registry map
-    //Factory::Instance().Register<Actor>("Actor");
+    // Register the actor, adding it to the m_registry map
+    Factory::Instance().Register<Actor>("Actor");
+    Factory::Instance().Register<Object>("Object");
 
-    //// Create the acotr, giving it a name that can be used to call the actor's functions
-    //auto actor = Factory::Instance().Create<Actor>("Actor");
-    //std::cout << actor->IsActive() << std::endl;
-    //std::cout << actor->GetRadius() << std::endl;
+   // Create the acotr, giving it a name that can be used to call the actor's functions
+    auto actor = Factory::Instance().Create<Actor>("Actor");
+    std::cout << actor->IsActive() << std::endl;
+    std::cout << actor->GetRadius() << std::endl;
+    std::cout << std::endl;
+
+    auto object = Factory::Instance().Create("Object");
+
+    json::document_t document;
+    if (json::Load("assets/data/scene.json", document))
+    {
+        object->Read(document);
+        std::cout << object->GetName() << std::endl;
+    }
 
     return 0;
 

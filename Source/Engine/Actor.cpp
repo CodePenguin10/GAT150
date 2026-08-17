@@ -3,9 +3,13 @@
 #include "Renderer.h"
 #include "MathUtility.h"
 #include "Texture.h"
+#include "Engine.h"
+
 
 namespace nu
 {
+    FACTORY_REGISTER(Actor)
+
     void Actor::Update(float dt)
     {
         //Lifespan
@@ -14,6 +18,12 @@ namespace nu
             m_lifespan -= dt;
             m_destroyed = (m_lifespan <= 0);
         }
+
+        for (auto component : m_components)
+        {
+            component->Update(dt);
+        }
+
 
         //physics
         m_transform.position += (m_velocity * dt);
@@ -25,6 +35,20 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
+        //Uncomment this when finished with spriterenderercomponent
+
+   /*     for (auto component : m_components)
+        {
+            auto rendererComponent = dynamic_cast<RendererComponent*>(component);
+            if(rendererComponent)
+            {
+                renderercomponent->Draw(renderer);
+            }
+
+            component->Draw(renderer);
+        }*/
+
+        //Delete these later
         if (m_model)
         {
             renderer.DrawModel(*m_model, m_transform);
@@ -34,10 +58,12 @@ namespace nu
         {
             renderer.DrawTexture(*m_texture, m_transform.position.x, m_transform.position.y, m_transform.rotation, m_transform.scale);
         }
+        //
     }
 
     float Actor::GetRadius() const
     {
+        //Deleter these later
         if (m_model)
         {
             return m_model->GetRadius() * m_transform.scale * 0.9f;
@@ -47,7 +73,7 @@ namespace nu
         {
             return (m_texture->GetSize().Length() * 0.5f) * 0.5f;
         }
-
+        //
         return 0.0f;
        
     }

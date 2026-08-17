@@ -5,6 +5,8 @@
 #include "Renderer.h"
 #include "SpaceGame.h"
 
+FACTORY_REGISTER(Player)
+
 using namespace nu;
 
 void Player::Update(float dt)
