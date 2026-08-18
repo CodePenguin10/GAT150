@@ -77,4 +77,11 @@ namespace nu
         return 0.0f;
        
     }
+
+    void Actor::Read(const json::value_t& value)
+    {
+        Object::Read(value);
+        JSON_READ_NAME(value, "tag", m_tag);
+        JSON_READ_NAME(value, "lifespan", m_lifespan);
+    }
 }

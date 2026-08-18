@@ -29,7 +29,7 @@ namespace nu
     {
     public:
         Actor() = default;
-        Actor(const ActorDesc& actorDesc) : m_name{ actorDesc.name }, m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan }, m_model{ actorDesc.model }, m_texture{ actorDesc.texture } {}
+        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan }, m_model{ actorDesc.model }, m_texture{ actorDesc.texture } {}
         
         virtual void Update(float dt);
         virtual void Draw(const class Renderer& renderer);
@@ -56,10 +56,11 @@ namespace nu
         void SetDestroyed(bool destroy = true) { m_destroyed = destroy;  }
         bool GetDestroyed() const { return m_destroyed; }
 
+        virtual void Read(const json::value_t& value) override;
+
         friend Scene;
 
     protected:
-        std::string m_name;
         std::string m_tag;
 
         Transform m_transform;

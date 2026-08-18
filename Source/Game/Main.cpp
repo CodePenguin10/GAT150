@@ -19,12 +19,7 @@ int main()
 {
     //CAN'T TOUCH THIS
 
-    // read/show the data from the json file
-
-    //--------------------------------------------------------------------------------------------------------
-
     // Register the actor, adding it to the m_registry map
-    Factory::Instance().Register<Actor>("Actor");
     Factory::Instance().Register<Object>("Object");
 
    // Create the acotr, giving it a name that can be used to call the actor's functions
@@ -38,8 +33,9 @@ int main()
     json::document_t document;
     if (json::Load("assets/data/scene.json", document))
     {
-        object->Read(document);
-        std::cout << object->GetName() << std::endl;
+        actor->Read(document);
+        std::cout << actor->GetName() << std::endl;
+        std::cout << actor->GetTag() << std::endl;
     }
 
     return 0;
