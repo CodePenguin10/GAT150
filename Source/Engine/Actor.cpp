@@ -81,7 +81,15 @@ namespace nu
     void Actor::Read(const json::value_t& value)
     {
         Object::Read(value);
+
+        if (JSON_HAS_NAME(value, "transform"))
+        {
+            m_transform.Read(JSON_GET_NAME(value, "transform"));
+        }
+
         JSON_READ_NAME(value, "tag", m_tag);
         JSON_READ_NAME(value, "lifespan", m_lifespan);
+        JSON_READ_NAME(value, "velocity", m_velocity);
+        JSON_READ_NAME(value, "damping", m_damping);
     }
 }

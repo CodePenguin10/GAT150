@@ -18,24 +18,25 @@ using namespace nu;
 int main()
 {
     //CAN'T TOUCH THIS
+    
+    // 
+    Factory::Instance().Register<Actor>("Actor");
+    Factory::Instance().Register<Player>("Player");
 
-    // Register the actor, adding it to the m_registry map
-    Factory::Instance().Register<Object>("Object");
 
    // Create the acotr, giving it a name that can be used to call the actor's functions
     auto actor = Factory::Instance().Create<Actor>("Actor");
-    std::cout << actor->IsActive() << std::endl;
-    std::cout << actor->GetRadius() << std::endl;
-    std::cout << std::endl;
-
-    auto object = Factory::Instance().Create("Object");
+    auto player = Factory::Instance().Create<Player>("Player");
 
     json::document_t document;
     if (json::Load("assets/data/scene.json", document))
     {
-        actor->Read(document);
-        std::cout << actor->GetName() << std::endl;
-        std::cout << actor->GetTag() << std::endl;
+        player->Read(document);
+        std::cout << player->GetName() << std::endl;
+        std::cout << player->GetTag() << std::endl;
+
+        std::cout << player->GetTransform().rotation << std::endl;
+        std::cout << player->GetSpeed() << std::endl;
     }
 
     return 0;

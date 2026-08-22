@@ -1,22 +1,23 @@
 #pragma once
+#include "Json.h"
 #include "Vector2.h"
-#include "Vector3.h"
+
 
 namespace nu
 { 
     struct Transform
     {
-        Vector2 position;
-        float rotation;
-        float scale;
-    };
+        Vector2 position{0.0f, 0.0f};
+        float rotation{ 45.0f };
+        float scale{ 1.0f };
 
-    struct Transform3D
-    {
-        Vector3 position;
-        float rotation;
-        float scale;
-	};
+        void Read(const json::value_t& value)
+        {
+            JSON_READ(value, position);
+            JSON_READ(value, rotation);
+            JSON_READ(value, scale);
+        }
+    };
 }
 
 
