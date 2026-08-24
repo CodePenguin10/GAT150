@@ -1,10 +1,10 @@
 #pragma once
 //Creation
 #include "Random.h"
-#include "Vector2.h"
-#include "Vector3.h"
-#include "MathUtility.h"
-#include "Transform.h"
+#include "Math/Vector2.h"
+#include "Math/Vector3.h"
+#include "Math/MathUtility.h"
+#include "Math/Transform.h"
 #include "Mesh.h"
 #include "Model.h"
 #include "StringUtility.h"

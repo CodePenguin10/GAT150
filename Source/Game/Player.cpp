@@ -43,7 +43,7 @@ void Player::Update(float dt)
 	m_fireTimer -= dt;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_SPACE) && m_fireTimer <= 0)
 	{
-		auto actor = Factory::Instance().Create<Actor>("PlayerPrototype");
+		auto actor = Factory::Instance().Create<Actor>("BulletPrototype");
 		m_scene->AddActor(std::move(actor));
 	}
 

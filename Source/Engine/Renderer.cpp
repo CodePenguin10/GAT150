@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "Renderer.h"
-#include "Transform.h"
+#include "Math/Transform.h"
 #include "Model.h"
-#include "MathUtility.h"
+#include "Math/MathUtility.h"
 #include "Texture.h"
 #include "Input.h"
 
