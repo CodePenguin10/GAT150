@@ -17,15 +17,7 @@ using namespace nu;
 
 int main()
 {
-    //CAN'T TOUCH THIS
-    
-    // 
-    Factory::Instance().Register<Actor>("Actor");
-    Factory::Instance().Register<Player>("Player");
-
-
-   // Create the acotr, giving it a name that can be used to call the actor's functions
-    auto actor = Factory::Instance().Create<Actor>("Actor");
+    /*
     auto player = Factory::Instance().Create<Player>("Player");
 
     json::document_t document;
@@ -40,6 +32,7 @@ int main()
     }
 
     return 0;
+    */
 
     // INITILALIZATION
     Engine::Get().Initialize();
