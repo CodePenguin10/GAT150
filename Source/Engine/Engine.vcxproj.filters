@@ -15,6 +15,30 @@
     <Filter Include="Framework">
       <UniqueIdentifier>{390e93e6-ec5e-497c-8780-459e7a54581f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{cd7dda8e-078b-44e5-bb90-2b98f01259dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{c865baec-4c18-4cb4-b59a-41c2b85b86a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{b90de769-2a18-431a-b844-13917ec43df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{e2a19164-59be-47fa-8e2a-a01b16820e72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{e15803a1-83b8-4f32-bcd0-724bd044a3f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{c14e4382-f838-44e5-b2c4-e1d0e9bd8cec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{4525f235-e8b0-4c42-8d7f-b47728d0381b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{3b5bc53f-98d6-486a-b0a0-d953e16faaf3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -85,25 +109,13 @@
     <ClInclude Include="Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MathUtility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Actor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
@@ -165,6 +177,9 @@
     </ClInclude>
     <ClInclude Include="Components\SpriteRendererComponent.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Rect.h">
+      <Filter>Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
