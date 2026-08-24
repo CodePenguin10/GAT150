@@ -1,6 +1,19 @@
 {
   "actors": [
     {
+      "type": "Actor",
+      "prototype": false,
+      "name": "Coin",
+      "tag": "Enemy",
+      "active": true,
+      "transform": {
+        "position": [ 200.0, 200.0 ],
+        "rotation": 0.0,
+        "scale": 3.0
+      }
+    },
+
+    {
       "type": "Player",
       "prototype": true,
       "name": "PlayerPrototype",
@@ -41,7 +54,7 @@
       "speed": 1500.0,
       "damping": 0.75,
       "texture": "assets/textures/bullet.png",
-      "lifespan":  1.5,
+      "lifespan": 1.5,
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
