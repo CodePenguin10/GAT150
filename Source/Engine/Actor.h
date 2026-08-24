@@ -75,6 +75,7 @@ namespace nu
         res_t<Model> m_model;
         res_t<Texture> m_texture;
         //
+
         std::vector<Component*> m_components;
 
         Scene* m_scene = nullptr;

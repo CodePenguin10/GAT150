@@ -23,6 +23,7 @@ void Enemy::Update(float dt)
 		velocity = velocity.Rotate(m_transform.rotation * nu::DegToRad);
 		AddVelocity(velocity * m_speed * dt);
 	}
+
 	//particle system
 	nu::Particle particle;
 

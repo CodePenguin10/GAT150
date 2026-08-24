@@ -35,7 +35,7 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
-        //Delete these later
+           //Delete these later
         if (m_model)
         {
             renderer.DrawModel(*m_model, m_transform);

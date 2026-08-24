@@ -43,17 +43,8 @@ void Player::Update(float dt)
 	m_fireTimer -= dt;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_SPACE) && m_fireTimer <= 0)
 	{
-		m_fireTimer = 0.15f;
-		BulletDesc Desc;
-		Desc.name = "Bullet";
-		Desc.tag = "Friendly_Bullet";
-		Desc.texture = Resources().Get<Texture>("assets/textures/Bullet.png", Engine::Get().GetRenderer());
-		Desc.transform = m_transform;
-		Desc.transform.scale = 2.0f;
-		Desc.speed = 1500.0f;
-		Desc.lifespan = 1.5f;
-
-		m_scene->AddActor(std::move(std::make_unique<Bullet>(Desc)));
+		auto actor = Factory::Instance().Create<Actor>("PlayerPrototype");
+		m_scene->AddActor(std::move(actor));
 	}
 
 	//Bullet Time
