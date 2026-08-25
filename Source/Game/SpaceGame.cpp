@@ -121,28 +121,13 @@ void SpaceGame::OnPlayerDeath()
 
 void SpaceGame::SpawnPlayer()
 {
-	PlayerDesc playerDesc;
-	playerDesc.name = "Player";
-	playerDesc.tag = "Player";
-	playerDesc.texture = Resources().Get<Texture>("assets/textures/player.png", Engine::Get().GetRenderer());
-	playerDesc.transform = nu::Transform{ nu::Vector2{ 640.0f, 512.0f }, 0.0f, 1.0f };
-	playerDesc.damping = 0.75f;
-	playerDesc.speed = 750.0f;
-
-	std::unique_ptr<Player> player = std::make_unique<Player>(playerDesc);
-	m_scene->AddActor(std::move(player));
+	auto actor = Factory::Instance().Create<Actor>("PlayerPrototype");
+	m_scene->AddActor(std::move(actor));
 }
 
 void SpaceGame::SpawnEnemy()
 {
-	EnemyDesc enemyDesc;
-	enemyDesc.name = "Enemy";
-	enemyDesc.tag = "Enemy";
-	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Fast_enemy.png", Engine::Get().GetRenderer());
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
-	enemyDesc.damping = 0.75f;
-	enemyDesc.health = 1.0f;
-	enemyDesc.speed = nu::RandomFloat(700.0f, 850.0f);
-
-	m_scene->AddActor(std::move(std::make_unique<Enemy>(enemyDesc)));
+	auto actor = Factory::Instance().Create<Actor>("EnemyPrototype");
+	actor->SetPosition({ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f) });
+	m_scene->AddActor(std::move(actor));
 }

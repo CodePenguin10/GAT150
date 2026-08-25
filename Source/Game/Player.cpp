@@ -2,7 +2,7 @@
 #include "Bullet.h"
 #include "Assets.h"
 #include "Engine.h"
-#include "Renderer.h"
+#include "Renderer/Renderer.h"
 #include "SpaceGame.h"
 
 FACTORY_REGISTER(Player)
@@ -43,7 +43,7 @@ void Player::Update(float dt)
 	m_fireTimer -= dt;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_SPACE) && m_fireTimer <= 0)
 	{
-		auto actor = Factory::Instance().Create<Actor>("PlayerPrototype");
+		auto actor = Factory::Instance().Create<Actor>("BulletPrototype");
 		m_scene->AddActor(std::move(actor));
 	}
 
@@ -62,7 +62,7 @@ void Player::Update(float dt)
 
 void Player::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Enemy" || other->GetTag() == "Enemy2" || other->GetTag() == "Enemy3")
+	if (other->GetTag() == "Enemy")
 	{
 		SetDestroyed();
 		((SpaceGame*)m_scene->GetGame())->OnPlayerDeath();
