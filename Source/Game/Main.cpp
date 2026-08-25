@@ -39,7 +39,6 @@ int main()
         std::cout << player->GetSpeed() << std::endl;
     }
 
-    return 0;
 
     // INITILALIZATION
     Engine::Get().Initialize();

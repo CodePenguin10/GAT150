@@ -59,8 +59,6 @@ void SpaceGame::Update(float dt)
 		{
 			m_spawnTimer = nu::RandomFloat(3.0f, 5.0f);
 			SpawnEnemy();
-			SpawnEnemy2();
-			SpawnEnemy3();
 		}
 		break;
 	case GameState::GameOver:
@@ -145,34 +143,6 @@ void SpaceGame::SpawnEnemy()
 	enemyDesc.damping = 0.75f;
 	enemyDesc.health = 1.0f;
 	enemyDesc.speed = nu::RandomFloat(700.0f, 850.0f);
-
-	m_scene->AddActor(std::move(std::make_unique<Enemy>(enemyDesc)));
-}
-
-void SpaceGame::SpawnEnemy2()
-{
-	EnemyDesc enemyDesc;
-	enemyDesc.name = "Enemy2";
-	enemyDesc.tag = "Enemy2";
-	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Normal_enemy.png", Engine::Get().GetRenderer());
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
-	enemyDesc.damping = 0.75f;
-	enemyDesc.health = 2.0f;
-	enemyDesc.speed = nu::RandomFloat(600.0f, 750.0f);
-
-	m_scene->AddActor(std::move(std::make_unique<Enemy>(enemyDesc)));
-}
-
-void SpaceGame::SpawnEnemy3()
-{
-	EnemyDesc enemyDesc;
-	enemyDesc.name = "Enemy3";
-	enemyDesc.tag = "Enemy3";
-	enemyDesc.texture = Resources().Get<Texture>("assets/textures/Slow_enemy.png", Engine::Get().GetRenderer());
-	enemyDesc.transform = nu::Transform{ nu::Vector2{ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f)}, 0.0f, 1.0f };
-	enemyDesc.damping = 0.75f;
-	enemyDesc.health = 3.0f;
-	enemyDesc.speed = nu::RandomFloat(500.0f, 650.0f);
 
 	m_scene->AddActor(std::move(std::make_unique<Enemy>(enemyDesc)));
 }
