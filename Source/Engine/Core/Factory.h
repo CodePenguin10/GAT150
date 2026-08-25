@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Object.h"
+#include "Framework/Object.h"
 #include "Singleton.h"
 #include "StringUtility.h"
 

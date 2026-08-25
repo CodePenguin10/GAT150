@@ -2,7 +2,7 @@
 #include "Renderer.h"
 #include "Model.h"
 #include "Texture.h"
-#include "Input.h"
+#include "Input/Input.h"
 
 #include "Math/Transform.h"
 #include "Math/MathUtility.h"

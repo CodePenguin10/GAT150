@@ -1,7 +1,7 @@
 #pragma once
 #include "Object.h"
-#include "Model.h"
-#include "Resource.h"
+#include "Renderer/Model.h"
+#include "Resources/Resource.h"
 
 #include "Framework/Component.h"
 
