@@ -1,9 +1,11 @@
 #pragma once
 #include "Object.h"
-#include "Transform.h"
-#include "Model.h"
-#include "Resource.h"
+#include "Renderer/Model.h"
+#include "Resources/Resource.h"
+
 #include "Framework/Component.h"
+
+#include "Math/Transform.h"
 
 #include <string>
 #include <memory>
@@ -29,7 +31,7 @@ namespace nu
     {
     public:
         Actor() = default;
-        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan }, m_model{ actorDesc.model }, m_texture{ actorDesc.texture } {}
+        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan } {  }
         
         virtual void Update(float dt);
         virtual void Draw(const class Renderer& renderer);
@@ -51,7 +53,6 @@ namespace nu
         Scene* GetScene() { return m_scene; }
 
         float GetRadius() const;
-		void SetModel(std::shared_ptr<Model> model) { m_model = model; }
 
         void SetDestroyed(bool destroy = true) { m_destroyed = destroy;  }
         bool GetDestroyed() const { return m_destroyed; }
@@ -73,6 +74,7 @@ namespace nu
         res_t<Model> m_model;
         res_t<Texture> m_texture;
         //
+
         std::vector<Component*> m_components;
 
         Scene* m_scene = nullptr;

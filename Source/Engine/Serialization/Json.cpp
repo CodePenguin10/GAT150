@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Json.h"
-#include "File.h"
+#include "Core/File.h"
 
 #include <rapidjson/istreamwrapper.h>
 #include <rapidjson/error/en.h>
@@ -55,6 +55,21 @@ namespace nu::json
 
         // get the data
         data = value[name.c_str()].GetInt();
+
+        return true;
+    }
+
+    bool Read(const value_t& value, const std::string& name, unsigned int& data)
+    {
+        // check if the value has the "<name>" and the correct data type
+        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsInt())
+        {
+            std::cerr << "Could not read JSON value (unsigned int):" << name << std::endl;
+            return false;
+        }
+
+        // get the data
+        data = value[name.c_str()].GetUint();
 
         return true;
     }

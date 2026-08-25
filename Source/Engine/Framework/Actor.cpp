@@ -1,9 +1,12 @@
 #include "pch.h"
 #include "Actor.h"
-#include "Renderer.h"
-#include "MathUtility.h"
-#include "Texture.h"
+#include "Renderer/Renderer.h"
+#include "Renderer/Texture.h"
 #include "Engine.h"
+
+#include "Components/RendererComponent.h"
+
+#include "Math/MathUtility.h"
 
 
 namespace nu
@@ -35,47 +38,24 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
-        //Uncomment this when finished with spriterenderercomponent
-
-   /*     for (auto component : m_components)
-        {
-            auto rendererComponent = dynamic_cast<RendererComponent*>(component);
-            if(rendererComponent)
-            {
-                renderercomponent->Draw(renderer);
-            }
-
-            component->Draw(renderer);
-        }*/
-
-        //Delete these later
+           //Delete these later
         if (m_model)
-        {
-            renderer.DrawModel(*m_model, m_transform);
+        
+            for (auto component : m_components)
+            {
+            //check if component is a renderer component
+            auto rendererComponent = dynamic_cast<RendererComponent*>(component);
+            if (rendererComponent)
+            {
+                //draw renderer component
+                rendererComponent->Draw(renderer);
+            }
         }
-
-        if (m_texture)
-        {
-            renderer.DrawTexture(*m_texture, m_transform.position.x, m_transform.position.y, m_transform.rotation, m_transform.scale);
-        }
-        //
     }
 
     float Actor::GetRadius() const
     {
-        //Deleter these later
-        if (m_model)
-        {
-            return m_model->GetRadius() * m_transform.scale * 0.9f;
-        }
-
-        if (m_texture)
-        {
-            return (m_texture->GetSize().Length() * 0.5f) * 0.5f;
-        }
-        //
         return 0.0f;
-       
     }
 
     void Actor::Read(const json::value_t& value)
@@ -91,5 +71,26 @@ namespace nu
         JSON_READ_NAME(value, "lifespan", m_lifespan);
         JSON_READ_NAME(value, "velocity", m_velocity);
         JSON_READ_NAME(value, "damping", m_damping);
+
+        //read actor components
+        if (JSON_HAS_NAME(value, "components"))
+        {
+            //iterate through actor components
+            for (auto& componentValue : JSON_GET_NAME(value, "components").GetArray())
+            {
+                //get component type
+                std::string typeName;
+                JSON_READ_NAME(componentValue, "type", typeName);
+
+                //create component of type
+                auto component = Factory::Instance().Create<Component>(typeName);
+
+                if (component)
+                {
+                    component->Read(componentValue);
+                    //m_components.push_back(component);
+                }
+            }
+        }
     }
 }
