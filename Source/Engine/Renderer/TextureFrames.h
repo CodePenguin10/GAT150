@@ -11,7 +11,10 @@ namespace nu
 	{
 	public:
 		bool Load(const std::string& filename, class Renderer& renderer);
-		Rect GetFrameRect(int frame);
+		Rect GetFrameRect(unsigned int frame);
+
+		unsigned int GetTotalFrames() const { return m_totalFrames; }
+		res_t<class Texture> GetTexture() const { return m_texture; }
 
 	private:
 		int m_numColumns = 0;

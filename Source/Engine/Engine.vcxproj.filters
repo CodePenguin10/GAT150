@@ -166,18 +166,6 @@
     <ClInclude Include="Math\Rect.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector3.h">
-      <Filter>Math</Filter>
-    </ClInclude>
-    <ClInclude Include="MathUtility.h">
-      <Filter>Math</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Math</Filter>
-    </ClInclude>
     <ClInclude Include="StringUtility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -198,6 +186,18 @@
     </ClInclude>
     <ClInclude Include="Renderer\TextureFrames.h">
       <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MathUtility.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Transform.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector3.h">
+      <Filter>Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

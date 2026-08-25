@@ -21,12 +21,17 @@
       "active": true,
       "speed": 750.0,
       "damping": 0.75,
-      "texture": "assets/textures/player.png",
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
         "scale": 1.0
-      }
+      },
+      "components": [
+        {
+          "type": "SpriteRendererComponent",
+          "texture": "assets/textures/player.png"
+        }
+      ]
     },
 
     {
