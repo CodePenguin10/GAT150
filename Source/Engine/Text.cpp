@@ -3,6 +3,10 @@
 #include "Vector3.h"
 #include "Renderer.h"
 
+#include <SDL3/SDL.h>
+#include <SDL3_ttf/SDL_ttf.h>
+#include <iostream>
+
 namespace nu
 {
 	Text::~Text() {

@@ -35,7 +35,20 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
-           //Delete these later
+        //Uncomment this when finished with spriterenderercomponent
+
+   /*     for (auto component : m_components)
+        {
+            auto rendererComponent = dynamic_cast<RendererComponent*>(component);
+            if(rendererComponent)
+            {
+                renderercomponent->Draw(renderer);
+            }
+
+            component->Draw(renderer);
+        }*/
+
+        //Delete these later
         if (m_model)
         {
             renderer.DrawModel(*m_model, m_transform);
@@ -73,14 +86,6 @@ namespace nu
         {
             m_transform.Read(JSON_GET_NAME(value, "transform"));
         }
-
-        std::string textureName;
-        JSON_READ_NAME(value, "texture", textureName);
-        if (!textureName.empty())
-        {
-            m_texture = Resources().Get<Texture>(textureName, Engine::Get().GetRenderer());
-        }
-
 
         JSON_READ_NAME(value, "tag", m_tag);
         JSON_READ_NAME(value, "lifespan", m_lifespan);

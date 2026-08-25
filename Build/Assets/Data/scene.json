@@ -1,53 +1,13 @@
 {
-  "actors": [
-    {
-      "type": "Player",
-      "prototype": true,
-      "name": "PlayerPrototype",
-      "tag": "Player",
-      "active": true,
-      "speed": 750.0,
-      "damping": 0.75,
-      "texture": "assets/textures/player.png",
-      "transform": {
-        "position": [ 640.0, 512.0 ],
-        "rotation": 0.0,
-        "scale": 1.0
-      }
-    },
+  "name": "Paxton M Hjorth",
+  "tag": "Student",
+  "active": true,
+  "speed":  150.0,
+  "transform": {
+    "position": [ 2.4, 5.6 ],
+    "rotation": 45.0,
+    "scale": 2.0
+  }
 
-    {
-      "type": "Enemy",
-      "prototype": true,
-      "name": "EnemyPrototype",
-      "tag": "Enemy",
-      "active": true,
-      "speed": 800.0,
-      "damping": 0.75,
-      "texture": "assets/textures/Fast_enemy.png",
-      "transform": {
-        "position": [ 640.0, 512.0 ],
-        "rotation": 0.0,
-        "scale": 1.0
-      }
-    },
 
-    {
-      "type": "Bullet",
-      "prototype": true,
-      "name": "BulletPrototype",
-      "tag": "Bullet",
-      "active": true,
-      "speed": 1500.0,
-      "damping": 0.75,
-      "texture": "assets/textures/bullet.png",
-      "lifespan":  1.5,
-      "transform": {
-        "position": [ 640.0, 512.0 ],
-        "rotation": 0.0,
-        "scale": 1.0
-      }
-    }
-  ]
- 
 }
