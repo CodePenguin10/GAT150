@@ -13,14 +13,13 @@ bool SpaceGame::Initialize()
 
 	m_scene = new Scene();
 	m_scene->SetGame(this);
+	m_scene->Load("assets/data/scene.json");
 
 	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "assets/fonts/Private Teacher.ttf", 128.0f));
 	m_titleText->Create(Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
 
 	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "assets/fonts/Private Teacher.ttf", 32.0f));
 	m_livesText = new Text(Resources().Get<Font>("game_font", 32.0f));
-
-
 
 	return true;
 }

@@ -13,6 +13,8 @@ namespace nu
 		void RemoveAllActors();
 
 		void Update(float dt);
+		bool Load(const std::string& sceneName);
+
 		void Draw(const class Renderer& renderer);
 
 		template<typename T>
