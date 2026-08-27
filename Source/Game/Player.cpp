@@ -62,7 +62,7 @@ void Player::Update(float dt)
 
 void Player::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Enemy" || other->GetTag() == "Enemy2" || other->GetTag() == "Enemy3")
+	if (other->GetTag() == "Enemy")
 	{
 		SetDestroyed();
 		((SpaceGame*)m_scene->GetGame())->OnPlayerDeath();

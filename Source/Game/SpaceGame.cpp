@@ -21,8 +21,6 @@ bool SpaceGame::Initialize()
 	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "assets/fonts/Private Teacher.ttf", 32.0f));
 	m_livesText = new Text(Resources().Get<Font>("game_font", 32.0f));
 
-
-
 	return true;
 }
 
@@ -129,6 +127,6 @@ void SpaceGame::SpawnPlayer()
 void SpaceGame::SpawnEnemy()
 {
 	auto actor = Factory::Instance().Create<Actor>("EnemyPrototype");
-	actor->SetPosition({ RandomFloat(1024.0f), RandomFloat(800.0f) });
+	actor->SetPosition({ nu::RandomFloat(0.0f, 1280.0f), nu::RandomFloat(0.0f, 1024.0f) });
 	m_scene->AddActor(std::move(actor));
 }

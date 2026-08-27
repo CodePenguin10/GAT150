@@ -18,51 +18,6 @@ namespace nu
 		m_actors.clear();
 	}
 
-	bool Scene::Load(const std::string& sceneName)
-	{
-		json::document_t document;
-		if (json::Load(sceneName, document))
-		{
-			if (JSON_HAS_NAME(document, "actors"))
-			{
-				for (auto& actorValue : JSON_GET_NAME(document, "actors").GetArray())
-				{
-					//get actor type
-					std::string typeName;
-					JSON_READ_NAME(actorValue, "type", typeName);
-
-					//create actor of type
-					auto actor = Factory::Instance().Create<Actor>(typeName);
-
-					// read actor json
-					actor->Read(actorValue);
-
-					//check if prototype
-					bool prototype = false;
-					JSON_READ(actorValue, prototype);
-
-					if (prototype)
-					{
-						//add prototype to factory registry
-						std::string name;
-						JSON_READ(actorValue, name);
-
-						Factory::Instance().RegisterPrototype<Actor>(name, std::move(actor));
-					}
-					else
-					{
-						//add actor to scene
-						AddActor(std::move(actor));
-					}
-				}
-			}			
-		}
-		else
-		{
-			return false;
-		}
-	}
-
 	void Scene::Update(float dt)
 	{
 		// update actors
@@ -86,6 +41,62 @@ namespace nu
 		m_pendingActors.clear();
 
 		//m_actors.insert(m_actors.end(), m_pendingActors.begin(), m_pendingActors.end());
+	}
+
+	bool Scene::Load(const std::string& sceneName)
+	{
+		json::document_t document;
+		if (json::Load(sceneName, document))
+		{
+			if (JSON_HAS_NAME(document, "actors"))
+			{
+				for (auto& actorValue : JSON_GET_NAME(document, "actors").GetArray())
+				{
+					// get actor type
+					std::string typeName;
+					JSON_READ_NAME(actorValue, "type", typeName);
+
+					std::cout << "Loading actor type: " << typeName << std::endl;
+
+					// create actor of type
+					auto actor = Factory::Instance().Create<Actor>(typeName);
+
+					// could not create actor (actor is null)
+					if (!actor)
+					{
+						std::cout << "Could not create actor type: " << typeName << std::endl;
+						continue;
+					}
+
+					// read actor json 
+					actor->Read(actorValue);
+
+					// check if prototype
+					bool prototype = false;
+					JSON_READ(actorValue, prototype);
+
+					if (prototype)
+					{
+						// if prototype, add prototype to factory registry
+						std::string name;
+						JSON_READ(actorValue, name);
+						Factory::Instance().RegisterPrototype<Actor>(name, std::move(actor));
+					}
+					else
+					{
+						// not prototype, add actor to scene
+						AddActor(std::move(actor));
+					}
+				}
+
+			}
+		}
+		else
+		{
+			return false;
+		}
+
+		return true;
 	}
 
 	void Scene::Draw(const class Renderer& renderer)

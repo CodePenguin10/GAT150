@@ -38,8 +38,11 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
-        for (auto component : m_components)
-        {
+           //Delete these later
+        if (m_model)
+        
+            for (auto component : m_components)
+            {
             //check if component is a renderer component
             auto rendererComponent = dynamic_cast<RendererComponent*>(component);
             if (rendererComponent)
