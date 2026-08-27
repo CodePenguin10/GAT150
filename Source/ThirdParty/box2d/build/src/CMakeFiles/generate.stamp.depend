@@ -1,8 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/src/CMakeLists.txt
-C:/Program Files/CMake/share/cmake-4.4/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
-C:/Program Files/CMake/share/cmake-4.4/Modules/CMakePackageConfigHelpers.cmake
-C:/Program Files/CMake/share/cmake-4.4/Modules/ExternalProject/shared_internal_commands.cmake
-C:/Program Files/CMake/share/cmake-4.4/Modules/FetchContent.cmake
-C:/Program Files/CMake/share/cmake-4.4/Modules/GNUInstallDirs.cmake
-C:/Program Files/CMake/share/cmake-4.4/Modules/WriteBasicConfigVersionFile.cmake

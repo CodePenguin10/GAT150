@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
