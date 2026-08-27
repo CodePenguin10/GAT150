@@ -11,6 +11,8 @@ namespace nu
 		m_pendingActors.push_back(std::move(actor)); 
 	}
 
+	//This is a comment that doesn't belong in the "main version", hopefully this'll allow me to fix the issue
+
 	void Scene::RemoveAllActors()
 	{
 		m_actors.clear();
