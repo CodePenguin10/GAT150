@@ -9,7 +9,7 @@ namespace nu
 	{
 	public:
 
-		CLASS_PROTOTYPE(SpriteRendererComponent)
+		CLASS_PROTOTYPE(SpriteRendererComponent);
 
 		void Draw(const Renderer& renderer) override;
 

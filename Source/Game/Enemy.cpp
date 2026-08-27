@@ -12,7 +12,7 @@ using namespace nu;
 
 void Enemy::Update(float dt)
 {
-	Player* player = m_scene->GetActorByName<Player>("PlayerPrototype");
+	Player* player = m_scene->GetActorByName<Player>("Player");
 	if (player)
 	{
 		nu::Vector2 direction = player->GetTransform().position - m_transform.position;
@@ -23,7 +23,6 @@ void Enemy::Update(float dt)
 		velocity = velocity.Rotate(m_transform.rotation * nu::DegToRad);
 		AddVelocity(velocity * m_speed * dt);
 	}
-
 	//particle system
 	nu::Particle particle;
 
@@ -42,7 +41,7 @@ void Enemy::Update(float dt)
 
 void Enemy::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Bullet")
+	if (other->GetTag() == "Friendly_Bullet")
 	{
 		m_health -= 1.0f;
 
@@ -65,11 +64,4 @@ void Enemy::OnCollision(Actor* other)
 			nu::Engine::Get().GetPS().AddParticle(particle);
 		}
 	}
-}
-
-void Enemy::Read(const nu::json::value_t& value)
-{
-	Actor::Read(value);
-
-	JSON_READ_NAME(value, "speed", m_speed);
 }

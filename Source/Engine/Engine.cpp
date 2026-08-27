@@ -4,6 +4,9 @@
 #include "Engine.h"
 #include "framework.h"
 
+
+#include <iostream>
+
 namespace nu
 {
 	bool Engine::Initialize()
@@ -13,6 +16,7 @@ namespace nu
 		m_particleSystem.Initialize(5000);
 		m_audio.Initialize();
 		m_input.Initialize();
+		m_physics.Initialize();
 
 		return true;
 	}
@@ -23,6 +27,7 @@ namespace nu
 		m_audio.Shutdown();
 		m_particleSystem.Shutdown();
 		m_renderer.Shutdown();
+		m_physics.Shutdown();
 	}
 
 	void Engine::Update()
@@ -31,5 +36,6 @@ namespace nu
 		m_audio.Update();
 		m_time.Tick();
 		m_particleSystem.Update(m_time.GetDeltaTime());
+		m_physics.Update(m_time.GetDeltaTime());
 	}
 }

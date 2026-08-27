@@ -26,6 +26,7 @@
 #include "Audio/Audio.h"
 #include "Renderer/ParticleSystem.h"
 #include "Resources/ResourceManager.h"
+#include "Physics/Physics.h"
 
 namespace nu
 {
@@ -44,6 +45,7 @@ namespace nu
 		Time& GetTime() { return m_time; }
 		ParticleSystem& GetPS() { return m_particleSystem; }
 		Audio& GetAudio() { return m_audio; }
+		Physics& GetPhysics() { return m_physics; }
 
 		Engine(const Engine&) = delete;
 		Engine& operator = (const Engine&) = delete;
@@ -53,9 +55,9 @@ namespace nu
 
 		Input m_input;
 		Renderer m_renderer;
+		Time m_time;
 		ParticleSystem m_particleSystem;
 		Audio m_audio;
-
-		Time m_time;
+		Physics m_physics;
 	};
 }
