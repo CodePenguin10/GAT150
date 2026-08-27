@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "File.h"
 
+#include <iostream>
+#include <sstream>
+#include <fstream>
+
 namespace nu
 {
 	std::string GetWorkingDirectory()

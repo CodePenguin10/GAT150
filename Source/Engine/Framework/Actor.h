@@ -33,8 +33,6 @@ namespace nu
         Actor() = default;
         Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan } {  }
         
-        CLASS_PROTOTYPE(Actor)
-
         virtual void Update(float dt);
         virtual void Draw(const class Renderer& renderer);
 
@@ -71,6 +69,11 @@ namespace nu
         float m_damping{ 0.0f };
         float m_lifespan{ 0.0f };
         bool m_destroyed{ false };
+
+        //Delete these later
+        res_t<Model> m_model;
+        res_t<Texture> m_texture;
+        //
 
         std::vector<Component*> m_components;
 

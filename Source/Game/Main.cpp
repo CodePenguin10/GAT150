@@ -17,23 +17,6 @@ using namespace nu;
 
 int main()
 {
-    /*
-    auto player = Factory::Instance().Create<Player>("Player");
-
-    json::document_t document;
-    if (json::Load("assets/data/scene.json", document))
-    {
-        player->Read(document);
-        std::cout << player->GetName() << std::endl;
-        std::cout << player->GetTag() << std::endl;
-
-        std::cout << player->GetTransform().rotation << std::endl;
-        std::cout << player->GetSpeed() << std::endl;
-    }
-
-    return 0;
-    */
-
     // INITILALIZATION
     Engine::Get().Initialize();
 

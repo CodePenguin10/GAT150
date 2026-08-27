@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "Font.h"
 
+#include <SDL3_ttf/SDL_ttf.h>
+#include <iostream>
+
 namespace nu
 {
 	Font::~Font() {
