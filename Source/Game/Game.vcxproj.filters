@@ -37,9 +37,6 @@
     <ClCompile Include="SpaceGame.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Newclass.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assets.h">
