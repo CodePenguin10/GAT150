@@ -17,29 +17,6 @@ using namespace nu;
 
 int main()
 {
-    //CAN'T TOUCH THIS
-    
-    // 
-    Factory::Instance().Register<Actor>("Actor");
-    Factory::Instance().Register<Player>("Player");
-
-
-   // Create the acotr, giving it a name that can be used to call the actor's functions
-    auto actor = Factory::Instance().Create<Actor>("Actor");
-    auto player = Factory::Instance().Create<Player>("Player");
-
-    json::document_t document;
-    if (json::Load("assets/data/scene.json", document))
-    {
-        player->Read(document);
-        std::cout << player->GetName() << std::endl;
-        std::cout << player->GetTag() << std::endl;
-
-        std::cout << player->GetTransform().rotation << std::endl;
-        std::cout << player->GetSpeed() << std::endl;
-    }
-
-
     // INITILALIZATION
     Engine::Get().Initialize();
 
