@@ -41,6 +41,7 @@ namespace nu::json
             return false;
         }
 
+        std::cout << "Load: " << filename << std::endl;
         return true;
     }
 
@@ -55,6 +56,8 @@ namespace nu::json
 
         // get the data
         data = value[name.c_str()].GetInt();
+
+        std::cout << "Read: " << name << std::endl;
 
         return true;
     }
@@ -71,6 +74,8 @@ namespace nu::json
         // get the data
         data = value[name.c_str()].GetUint();
 
+        std::cout << "Read: " << name << std::endl;
+
         return true;
     }
 
@@ -85,6 +90,8 @@ namespace nu::json
 
         // get the data
         data = value[name.c_str()].GetFloat();
+
+        std::cout << "Read: " << name << std::endl;
 
         return true;
     }
@@ -101,6 +108,8 @@ namespace nu::json
         // get the data
         data = value[name.c_str()].GetBool();
 
+        std::cout << "Read: " << name << std::endl;
+
         return true;
     }
 
@@ -115,6 +124,8 @@ namespace nu::json
 
         // get the data
         data = value[name.c_str()].GetString();
+
+        std::cout << "Read: " << name << std::endl;
 
         return true;
     }
@@ -143,6 +154,8 @@ namespace nu::json
             data[i] = array[i].GetFloat();
         }
 
+        std::cout << "Read: " << name << std::endl;
+
         return true;
     }
 
@@ -169,6 +182,8 @@ namespace nu::json
             // get the data
             data[i] = array[i].GetFloat();
         }
+
+        std::cout << "Read: " << name << std::endl;
 
         return true;
     }
