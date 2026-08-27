@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B24F54F-9B85-31AD-B6E4-AB0DE62CE929}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>samples</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">samples.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">samples</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">samples.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">samples</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">samples.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">samples</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main</LocalDebuggerWorkingDirectory>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">samples.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">samples</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\src\Debug\box2dd.lib;..\shared\Debug\shared.lib;Debug\imgui.lib;Debug\implot.lib;..\_deps\glfw-build\src\Debug\glfw3.lib;Debug\glad.lib;..\_deps\nfd-build\src\Debug\nfd.lib;..\src\Debug\box2dd.lib;Debug\imgui.lib;..\_deps\glfw-build\src\Debug\glfw3.lib;Debug\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/Debug/samples.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/bin/Debug/samples.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\src\Release\box2d.lib;..\shared\Release\shared.lib;Release\imgui.lib;Release\implot.lib;..\_deps\glfw-build\src\Release\glfw3.lib;Release\glad.lib;..\_deps\nfd-build\src\Release\nfd.lib;..\src\Release\box2d.lib;Release\imgui.lib;..\_deps\glfw-build\src\Release\glfw3.lib;Release\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/Release/samples.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/bin/Release/samples.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\src\MinSizeRel\box2d.lib;..\shared\MinSizeRel\shared.lib;MinSizeRel\imgui.lib;MinSizeRel\implot.lib;..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;MinSizeRel\glad.lib;..\_deps\nfd-build\src\MinSizeRel\nfd.lib;..\src\MinSizeRel\box2d.lib;MinSizeRel\imgui.lib;..\_deps\glfw-build\src\MinSizeRel\glfw3.lib;MinSizeRel\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/MinSizeRel/samples.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/bin/MinSizeRel/samples.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_ENABLE_ASSERT;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;B2_ENABLE_ASSERT;IMGUI_DISABLE_OBSOLETE_FUNCTIONS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\jsmn;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\..\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\shared;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\imgui-src\backends;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-src\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\extern\glad\include;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-src\src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\src\RelWithDebInfo\box2d.lib;..\shared\RelWithDebInfo\shared.lib;RelWithDebInfo\imgui.lib;RelWithDebInfo\implot.lib;..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;RelWithDebInfo\glad.lib;..\_deps\nfd-build\src\RelWithDebInfo\nfd.lib;..\src\RelWithDebInfo\box2d.lib;RelWithDebInfo\imgui.lib;..\_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;RelWithDebInfo\glad.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/RelWithDebInfo/samples.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/bin/RelWithDebInfo/samples.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main" "-BC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build" --check-stamp-file "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.vs;C:\Program Files\CMake\share\cmake-4.4\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main" "-BC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build" --check-stamp-file "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.vs;C:\Program Files\CMake\share\cmake-4.4\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main" "-BC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build" --check-stamp-file "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.vs;C:\Program Files\CMake\share\cmake-4.4\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/samples/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main" "-BC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build" --check-stamp-file "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/samples/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\background.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\line.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\point.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_capsule.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_circle.vs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.fs;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\data\solid_polygon.vs;C:\Program Files\CMake\share\cmake-4.4\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\container.c" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\container.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw.c" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw_text.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\main.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_replay.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\shader.c" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\shader.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\stb_image_write.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\car.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\car.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\donut.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\donut.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\doohickey.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\doohickey.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\dynamic_mover.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\dynamic_mover.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\geometric_mover.cpp" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\geometric_mover.h" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_benchmark.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_bodies.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_character.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_collision.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_continuous.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_determinism.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_events.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_geometry.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_issues.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_joints.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_robustness.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_shapes.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_stacking.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_world.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\ZERO_CHECK.vcxproj">
+      <Project>{C2D9F05D-C03A-3845-855D-785084CCED0A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\src\box2d.vcxproj">
+      <Project>{2F1ED93B-3B10-35AA-B835-F52F74BBD2D2}</Project>
+      <Name>box2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\glad.vcxproj">
+      <Project>{00740965-7D0B-3FCA-A677-BBE97139721D}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-build\src\glfw.vcxproj">
+      <Project>{07AAAFC9-058E-302E-9BF1-F4F86C7F86B0}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\imgui.vcxproj">
+      <Project>{90CF7235-94B2-3CFE-AE29-075E249B885E}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\samples\implot.vcxproj">
+      <Project>{3538A42B-ED7F-3C06-907A-CFE457FAC3E8}</Project>
+      <Name>implot</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-build\src\nfd.vcxproj">
+      <Project>{D8A34B94-F4A2-3ED8-89BF-EE671A3061AA}</Project>
+      <Name>nfd</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\shared\shared.vcxproj">
+      <Project>{92AFB681-029C-36C6-B2F9-205C2B96DBD9}</Project>
+      <Name>shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

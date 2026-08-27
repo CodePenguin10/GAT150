@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\container.c" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw.c" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw_text.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\main.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_replay.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\shader.c" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\car.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\donut.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\doohickey.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\dynamic_mover.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\geometric_mover.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_benchmark.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_bodies.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_character.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_collision.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_continuous.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_determinism.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_events.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_geometry.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_issues.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_joints.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_robustness.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_shapes.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_stacking.cpp" />
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample_world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\container.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\draw.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\sample.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\shader.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\stb_image_write.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\car.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\donut.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\doohickey.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\dynamic_mover.h" />
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\geometric_mover.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\samples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

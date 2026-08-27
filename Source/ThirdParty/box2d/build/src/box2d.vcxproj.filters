@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\aabb.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\arena_allocator.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\bitset.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\body.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\broad_phase.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\constraint_graph.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\contact.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\contact_solver.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\core.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\distance.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\distance_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\dynamic_tree.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\geometry.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\hull.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\id_pool.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\island.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\manifold.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\math_functions.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\motor_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\mover_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\mover.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\parallel_for.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\physics_world.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\pogo_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\prismatic_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\recording.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\recording_replay.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\revolute_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\scheduler.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\sensor.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\shape.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\solver.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\solver_set.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\table.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\timer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\types.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\weld_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\wheel_joint.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\world_snapshot.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\aabb.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\arena_allocator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\atomic.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\bitset.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\body.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\broad_phase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\constraint_graph.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\contact.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\contact_solver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\container.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\core.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\ctz.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\id_pool.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\island.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\joint.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\parallel_for.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\physics_world.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\recording.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\recording_ops.inl">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\recording_replay.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\scheduler.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\sensor.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\shape.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\solver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\solver_set.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\table.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\world_snapshot.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\base.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\box2d.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\collision.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\config.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\constants.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\id.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\math_functions.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\include\box2d\types.h">
+      <Filter>include\box2d</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\src\box2d.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{991BF81D-1469-3BA1-8F25-03EA8566C8B1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\box2d">
+      <UniqueIdentifier>{7F6AD7A5-D267-30E3-A1C2-62E6B80D5181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{174CC7B9-F4B7-3C32-982D-B95D08A83F49}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

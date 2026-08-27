@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E18F894B-952C-3532-BF25-FC4F67AFFC9F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>implot-populate</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-mkdir.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/tmp/implot-populate-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-mkdir</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-download.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (git clone) for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/tmp/implot-populate-gitclone.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\implot-populate-gitinfo.txt;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-download</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-update.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing update step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/tmp/implot-populate-gitupdate.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\tmp\implot-populate-gitupdate.cmake;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\implot-populate-update-info.txt;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-update</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-patch.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\implot-populate-patch-info.txt;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-patch</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-configure.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\tmp\implot-populate-cfgcmd.txt;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-configure</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-build.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-build</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-install.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-install</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\1244325fb5a3248c093124886cc5aa24\implot-populate-test.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd "C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-test"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-test</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\d017d1b3517e8bfba6ae12a9b0a600f5\implot-populate-complete.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'implot-populate'</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/Debug/implot-populate-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/implot-populate-prefix/src/implot-populate-stamp/Debug/implot-populate-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-install;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-mkdir;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-download;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-update;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-patch;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-configure;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-build;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\src\implot-populate-stamp\Debug\implot-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\Debug\implot-populate-complete</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\10507a1373f69ddad9ecbd2f14123d69\implot-populate.rule">
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\Debug\implot-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\implot-populate</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild" "-BC:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild" --check-stamp-file "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\4.4.3\CMakeSystem.cmake;C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\implot-populate-prefix\tmp\implot-populate-mkdirs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.4\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.4\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\CMakeFiles\implot-populate">
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\implot-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{2FD711F3-3156-3C00-85A0-6C3E99D8D6A7}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\glfw-subbuild\CMakeFiles\63e49aecef5559e79d9d9be9c6d12a48\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F9729BF7-E50B-380E-9C86-814231D25AAD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

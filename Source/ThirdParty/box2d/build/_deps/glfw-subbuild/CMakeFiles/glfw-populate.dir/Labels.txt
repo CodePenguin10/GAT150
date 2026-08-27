@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/63e49aecef5559e79d9d9be9c6d12a48/glfw-populate.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/9cc41795db88f45620b4dadb3de7bc57/glfw-populate-complete.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-build.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-configure.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-download.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-install.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-mkdir.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-patch.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-test.rule
+C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/glfw-subbuild/CMakeFiles/1c940838906b8cf5031814e7adfbd912/glfw-populate-update.rule

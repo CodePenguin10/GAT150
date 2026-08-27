@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/implot-populate"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/10507a1373f69ddad9ecbd2f14123d69/implot-populate.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/d017d1b3517e8bfba6ae12a9b0a600f5/implot-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-build.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-download.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-install.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-test.rule"
+		},
+		{
+			"file" : "C:/Neumont/4th quarter/GAT150/GameEngine/Source/ThirdParty/box2d/box2d-main/build/_deps/implot-subbuild/CMakeFiles/1244325fb5a3248c093124886cc5aa24/implot-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"implot-populate"
+		],
+		"name" : "implot-populate"
+	}
+}

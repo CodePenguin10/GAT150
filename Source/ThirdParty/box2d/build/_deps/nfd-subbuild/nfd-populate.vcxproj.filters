@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\ccafcab0a5d2917c8555bcb67bcfedbc\nfd-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\4b0777b5bbbe64f2a1db222735472f28\nfd-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\6e89f641cf30e7846f5a15274ca61592\nfd-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Neumont\4th quarter\GAT150\GameEngine\Source\ThirdParty\box2d\box2d-main\build\_deps\nfd-subbuild\CMakeFiles\nfd-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5FAB9FFF-D6F6-3DFF-8074-0081210505DB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
