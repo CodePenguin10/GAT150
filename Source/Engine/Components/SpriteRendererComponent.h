@@ -1,7 +1,7 @@
 #pragma once
 #include "RendererComponent.h"
-#include "Resource.h"
-#include "Texture.h"
+#include "Resources/Resource.h"
+#include "Renderer/Texture.h"
 
 namespace nu
 {
@@ -9,7 +9,7 @@ namespace nu
 	{
 	public:
 
-		//CLASS_PROTOTYPE(SpriteRendererComponent)
+		CLASS_PROTOTYPE(SpriteRendererComponent);
 
 		void Draw(const Renderer& renderer) override;
 

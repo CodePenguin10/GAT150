@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "SpriteRendererComponent.h"
-#include "Renderer.h"
-#include "Actor.h"
-#include "ResourceManager.h"
+#include "Renderer/Renderer.h"
+#include "Framework/Actor.h"
+#include "Resources/ResourceManager.h"
 #include "Engine.h"
 
 namespace nu
@@ -19,6 +19,13 @@ namespace nu
 
 	void SpriteRendererComponent::Read(const json::value_t& value)
 	{
+		RendererComponent::Read(value);
 
+		std::string textureName;
+		JSON_READ_NAME(value, "texture", textureName);
+		if (!textureName.empty())
+		{
+			m_texture = Resources().Get<Texture>(textureName, Engine::Get().GetRenderer());
+		}
 	}
 }

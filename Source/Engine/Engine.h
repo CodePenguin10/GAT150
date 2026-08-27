@@ -1,31 +1,32 @@
 #pragma once
 //Creation
-#include "Random.h"
-#include "Vector2.h"
-#include "Vector3.h"
-#include "MathUtility.h"
-#include "Transform.h"
-#include "Mesh.h"
-#include "Model.h"
-#include "StringUtility.h"
-#include "Json.h"
+#include "Core/Random.h"
+#include "Math/Vector2.h"
+#include "Math/Vector3.h"
+#include "Math/MathUtility.h"
+#include "Math/Transform.h"
+#include "Renderer/Mesh.h"
+#include "Renderer/Model.h"
+#include "Core/StringUtility.h"
+#include "Serialization/Json.h"
 
-#include "Text.h"
-#include "Texture.h"
+#include "Renderer/Text.h"
+#include "Renderer/Texture.h"
 
-#include "Factory.h"
+#include "Core/Factory.h"
 
 //Systems
-#include "Renderer.h"
-#include "Input.h"
-#include "GameTime.h"
-#include "Scene.h"
-#include "Actor.h"
-#include "Game.h"
-#include "File.h"
-#include "Audio.h"
-#include "ParticleSystem.h"
-#include "ResourceManager.h"
+#include "Renderer/Renderer.h"
+#include "Input/Input.h"
+#include "Core/GameTime.h"
+#include "Framework/Scene.h"
+#include "Framework/Actor.h"
+#include "Framework/Game.h"
+#include "Core/File.h"
+#include "Audio/Audio.h"
+#include "Renderer/ParticleSystem.h"
+#include "Resources/ResourceManager.h"
+#include "Physics/Physics.h"
 
 namespace nu
 {
@@ -44,6 +45,7 @@ namespace nu
 		Time& GetTime() { return m_time; }
 		ParticleSystem& GetPS() { return m_particleSystem; }
 		Audio& GetAudio() { return m_audio; }
+		Physics& GetPhysics() { return m_physics; }
 
 		Engine(const Engine&) = delete;
 		Engine& operator = (const Engine&) = delete;
@@ -53,9 +55,9 @@ namespace nu
 
 		Input m_input;
 		Renderer m_renderer;
+		Time m_time;
 		ParticleSystem m_particleSystem;
 		Audio m_audio;
-
-		Time m_time;
+		Physics m_physics;
 	};
 }

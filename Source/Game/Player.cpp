@@ -2,7 +2,7 @@
 #include "Bullet.h"
 #include "Assets.h"
 #include "Engine.h"
-#include "Renderer.h"
+#include "Renderer/Renderer.h"
 #include "SpaceGame.h"
 
 FACTORY_REGISTER(Player)
@@ -43,17 +43,8 @@ void Player::Update(float dt)
 	m_fireTimer -= dt;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_SPACE) && m_fireTimer <= 0)
 	{
-		m_fireTimer = 0.15f;
-		BulletDesc Desc;
-		Desc.name = "Bullet";
-		Desc.tag = "Friendly_Bullet";
-		Desc.texture = Resources().Get<Texture>("assets/textures/Bullet.png", Engine::Get().GetRenderer());
-		Desc.transform = m_transform;
-		Desc.transform.scale = 2.0f;
-		Desc.speed = 1500.0f;
-		Desc.lifespan = 1.5f;
-
-		m_scene->AddActor(std::move(std::make_unique<Bullet>(Desc)));
+		auto actor = Factory::Instance().Create<Actor>("BulletPrototype");
+		m_scene->AddActor(std::move(actor));
 	}
 
 	//Bullet Time
@@ -71,7 +62,7 @@ void Player::Update(float dt)
 
 void Player::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Enemy" || other->GetTag() == "Enemy2" || other->GetTag() == "Enemy3")
+	if (other->GetTag() == "Enemy")
 	{
 		SetDestroyed();
 		((SpaceGame*)m_scene->GetGame())->OnPlayerDeath();

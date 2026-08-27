@@ -1,0 +1,96 @@
+#include "pch.h"
+#include "Actor.h"
+#include "Renderer/Renderer.h"
+#include "Renderer/Texture.h"
+#include "Engine.h"
+
+#include "Components/RendererComponent.h"
+
+#include "Math/MathUtility.h"
+
+
+namespace nu
+{
+    FACTORY_REGISTER(Actor)
+
+    void Actor::Update(float dt)
+    {
+        //Lifespan
+        if (m_lifespan > 0.0f)
+        {
+            m_lifespan -= dt;
+            m_destroyed = (m_lifespan <= 0);
+        }
+
+        for (auto component : m_components)
+        {
+            component->Update(dt);
+        }
+
+
+        //physics
+        m_transform.position += (m_velocity * dt);
+        m_velocity *= 1.0f / ((1.0f) + m_damping * dt);
+
+        m_transform.position.x = Wrap(0.0f, 1280.0f, m_transform.position.x);
+        m_transform.position.y = Wrap(0.0f, 1024.0f, m_transform.position.y);
+    }
+
+    void Actor::Draw(const Renderer& renderer)
+    {
+           //Delete these later
+        if (m_model)
+        
+            for (auto component : m_components)
+            {
+            //check if component is a renderer component
+            auto rendererComponent = dynamic_cast<RendererComponent*>(component);
+            if (rendererComponent)
+            {
+                //draw renderer component
+                rendererComponent->Draw(renderer);
+            }
+        }
+    }
+
+    float Actor::GetRadius() const
+    {
+        return 0.0f;
+    }
+
+    void Actor::Read(const json::value_t& value)
+    {
+        Object::Read(value);
+
+        if (JSON_HAS_NAME(value, "transform"))
+        {
+            m_transform.Read(JSON_GET_NAME(value, "transform"));
+        }
+
+        JSON_READ_NAME(value, "tag", m_tag);
+        JSON_READ_NAME(value, "lifespan", m_lifespan);
+        JSON_READ_NAME(value, "velocity", m_velocity);
+        JSON_READ_NAME(value, "damping", m_damping);
+
+        //read actor components
+        if (JSON_HAS_NAME(value, "components"))
+        {
+            //iterate through actor components
+            for (auto& componentValue : JSON_GET_NAME(value, "components").GetArray())
+            {
+                //get component type
+                std::string typeName;
+                JSON_READ_NAME(componentValue, "type", typeName);
+
+                //create component of type
+                auto component = Factory::Instance().Create<Component>(typeName);
+
+                if (component)
+                {
+                    component->Read(componentValue);
+                    //m_components.push_back(component);
+                }
+            }
+        }
+    }
+}
