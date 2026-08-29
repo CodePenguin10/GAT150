@@ -12,6 +12,8 @@ public:
     Bullet() = default;
     Bullet(const BulletDesc& BulletDesc) : Actor{ BulletDesc }, m_speed{ BulletDesc.speed } {}
 
+    CLASS_PROTOTYPE(Bullet)
+
     void Update(float dt) override;
 
 private:

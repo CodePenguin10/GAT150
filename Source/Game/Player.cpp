@@ -45,7 +45,7 @@ void Player::Update(float dt)
 	{
 		auto bullet = Factory::Instance().Create<Actor>("BulletPrototype");
 		bullet->SetTransform(m_transform);
-		bullet->SetTag("PlayerBuller");
+		bullet->SetTag("PlayerBullet");
 		m_scene->AddActor(std::move(bullet));
 	}
 
