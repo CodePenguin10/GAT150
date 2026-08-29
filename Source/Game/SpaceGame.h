@@ -35,8 +35,6 @@ private:
 
 	void SpawnPlayer();
 	void SpawnEnemy();
-	void SpawnEnemy2();
-	void SpawnEnemy3();
 
 	GameState m_gameState = GameState::Title;
 

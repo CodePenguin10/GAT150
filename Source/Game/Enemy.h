@@ -13,6 +13,8 @@ public:
     Enemy() = default;
     Enemy(const EnemyDesc& enemyDesc) : Actor{ enemyDesc }, m_speed{ enemyDesc.speed }, m_health{ enemyDesc.health } {}
 
+    void Read(const nu::json::value_t& value) override;
+    float GetSpeed() const { return m_speed; }
 
     void Update(float dt) override;
     void OnCollision(Actor* other) override;

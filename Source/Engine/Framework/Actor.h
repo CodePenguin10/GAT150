@@ -19,21 +19,23 @@ namespace nu
     {
         std::string name;
         std::string tag;
-        Transform transform{ 0.0f, 0.0f, 0.0f};
+        Transform transform{ 0.0f, 0.0f, 0.0f };
         Vector2 velocity{ 0.0f, 0.0f };
         float damping{ 0.0f };
         float lifespan{ 0.0f };
         res_t<Model> model;
-		res_t<Texture> texture;
+        res_t<Texture> texture;
     };
 
     class Actor : public Object
     {
     public:
         Actor() = default;
-        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan } {  }
-        
-        virtual void Update(float dt);
+        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan } {}
+
+        CLASS_PROTOTYPE(Actor)
+
+            virtual void Update(float dt);
         virtual void Draw(const class Renderer& renderer);
 
         virtual void OnCollision(Actor* other) {}
@@ -54,7 +56,7 @@ namespace nu
 
         float GetRadius() const;
 
-        void SetDestroyed(bool destroy = true) { m_destroyed = destroy;  }
+        void SetDestroyed(bool destroy = true) { m_destroyed = destroy; }
         bool GetDestroyed() const { return m_destroyed; }
 
         virtual void Read(const json::value_t& value) override;
@@ -69,11 +71,6 @@ namespace nu
         float m_damping{ 0.0f };
         float m_lifespan{ 0.0f };
         bool m_destroyed{ false };
-
-        //Delete these later
-        res_t<Model> m_model;
-        res_t<Texture> m_texture;
-        //
 
         std::vector<Component*> m_components;
 

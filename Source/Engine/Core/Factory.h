@@ -1,34 +1,36 @@
 #pragma once
+
 #include "Framework/Object.h"
 #include "Singleton.h"
 #include "StringUtility.h"
 
+#include<iostream>
 #include <memory>
 #include <map>
 
-#define FACTORY_REGISTER(classname)                                     \
-    class Register##classname                                           \
-    {                                                                   \
-    public:                                                             \
-        Register##classname()                                           \
-        {                                                               \
-            nu::Factory::Instance().Register<classname>(#classname);    \
-        }                                                               \
-    };                                                                  \
-    static Register##classname registerInstance;
+#define FACTORY_REGISTER(classname) \
+    class Register##classname       \
+    {                               \
+        public:                     \
+            Register##classname()   \
+            {                       \
+                nu::Factory::Instance().Register<classname>(#classname); \
+            }                        \
+    };                               \
+    static Register##classname registerinstance;
 
 namespace nu
 {
-    class ICreator
+    class Icreator
     {
     public:
-        virtual ~ICreator() = default;
+        virtual ~Icreator() = default;
         virtual std::unique_ptr<Object> Create() = 0;
     };
 
     template <typename T>
         requires std::derived_from<T, Object>
-    class Creator : public ICreator
+    class Creator : public Icreator
     {
     public:
         std::unique_ptr<Object> Create() override { return std::make_unique<T>(); }
@@ -36,13 +38,13 @@ namespace nu
 
     template <typename T>
         requires std::derived_from<T, Object>
-    class PrototypeCreator : public ICreator
+    class PrototypeCreator : public Icreator
     {
     public:
-        PrototypeCreator(std::unique_ptr<Object> prototype) :
-            m_prototype{ std::move(prototype) }
+        PrototypeCreator(std::unique_ptr<Object> prototype) : m_prototype{ std::move(prototype) }
         {
         }
+
         std::unique_ptr<Object> Create() override
         {
             return m_prototype->Clone();
@@ -52,25 +54,24 @@ namespace nu
         std::unique_ptr<Object> m_prototype;
     };
 
-
     class Factory : public Singleton<Factory>
     {
     public:
-        template <typename T>
+        template<typename T>
             requires std::derived_from<T, Object>
         void Register(const std::string& name);
 
-        template <typename T>
+        template<typename T>
             requires std::derived_from<T, Object>
         void RegisterPrototype(const std::string& name, std::unique_ptr<T> prototype);
 
 
-        template <typename T = class Object>
+        template<typename T = class Object>
             requires std::derived_from<T, Object>
         std::unique_ptr<T> Create(const std::string& name);
 
     private:
-        std::map<std::string, std::unique_ptr<ICreator>> m_registry;
+        std::map<std::string, std::unique_ptr<Icreator>> m_registry;
     };
 
     template<typename T>
@@ -102,6 +103,8 @@ namespace nu
             return;
         }
 
+        std::cout << "Object registered: " << name << std::endl;
+
         m_registry[lowerName] = std::make_unique<PrototypeCreator<T>>(std::move(prototype));
     }
 
@@ -109,11 +112,11 @@ namespace nu
         requires std::derived_from<T, Object>
     inline std::unique_ptr<T> Factory::Create(const std::string& name)
     {
-
         std::string lowerName = ToLower(name);
+
         if (!m_registry.contains(lowerName))
         {
-            std::cerr << "Object not registered: " << name << std::endl;
+            std::cerr << "Object isn't registered: " << name << std::endl;
             return std::unique_ptr<T>();
         }
 
@@ -136,9 +139,9 @@ namespace nu
         else
         {
             std::cerr << "Object not derived from type: " << name << std::endl;
+            return std::unique_ptr<T>();
         }
 
         return std::unique_ptr<T>();
     }
-
 }

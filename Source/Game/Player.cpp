@@ -18,7 +18,7 @@ void Player::Update(float dt)
 
 	float rotate = 0.0f;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_A)) rotate = -180.0f;
-    if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_D)) rotate = +180.0f;
+	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_D)) rotate = +180.0f;
 
 	SetRotation(m_transform.rotation + rotate * dt);
 
@@ -35,7 +35,7 @@ void Player::Update(float dt)
 	particle.position = m_transform.position + offset;
 	particle.color = { 1.0f, 1.0f, 0.0f };
 	particle.lifespan = nu::RandomFloat(0.5f, 1.5f);
-	particle.velocity = nu::Vector2{ nu::RandomFloat(-30.0f, -100.0f), 0.0f}.Rotate((m_transform.rotation + nu::RandomInt(-10, 10)) * nu::DegToRad);
+	particle.velocity = nu::Vector2{ nu::RandomFloat(-30.0f, -100.0f), 0.0f }.Rotate((m_transform.rotation + nu::RandomInt(-10, 10)) * nu::DegToRad);
 
 	nu::Engine::Get().GetPS().AddParticle(particle);
 
@@ -62,7 +62,7 @@ void Player::Update(float dt)
 
 void Player::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Enemy")
+	if (other->GetTag() == "Enemy" || other->GetTag() == "Enemy2" || other->GetTag() == "Enemy3")
 	{
 		SetDestroyed();
 		((SpaceGame*)m_scene->GetGame())->OnPlayerDeath();

@@ -13,7 +13,7 @@ namespace nu
 {
     FACTORY_REGISTER(Actor)
 
-    void Actor::Update(float dt)
+        void Actor::Update(float dt)
     {
         //Lifespan
         if (m_lifespan > 0.0f)
@@ -38,11 +38,8 @@ namespace nu
 
     void Actor::Draw(const Renderer& renderer)
     {
-           //Delete these later
-        if (m_model)
-        
-            for (auto component : m_components)
-            {
+        for (auto component : m_components)
+        {
             //check if component is a renderer component
             auto rendererComponent = dynamic_cast<RendererComponent*>(component);
             if (rendererComponent)
