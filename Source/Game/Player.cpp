@@ -43,18 +43,10 @@ void Player::Update(float dt)
 	m_fireTimer -= dt;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_SPACE) && m_fireTimer <= 0)
 	{
-		auto actor = Factory::Instance().Create<Actor>("BulletPrototype");
-		m_scene->AddActor(std::move(actor));
-	}
-
-	//Bullet Time
-	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_LSHIFT))
-	{
-		nu::Engine::Get().GetTime().SetTimeScale(0.5f);
-	}
-	else
-	{
-		nu::Engine::Get().GetTime().SetTimeScale(1.0f);
+		auto bullet = Factory::Instance().Create<Actor>("BulletPrototype");
+		bullet->SetTransform(m_transform);
+		bullet->SetTag("PlayerBuller");
+		m_scene->AddActor(std::move(bullet));
 	}
 
 	Actor::Update(dt);
@@ -62,7 +54,7 @@ void Player::Update(float dt)
 
 void Player::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Enemy" || other->GetTag() == "Enemy2" || other->GetTag() == "Enemy3")
+	if (other->GetTag() == "Enemy")
 	{
 		SetDestroyed();
 		((SpaceGame*)m_scene->GetGame())->OnPlayerDeath();

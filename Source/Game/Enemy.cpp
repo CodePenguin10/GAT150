@@ -42,7 +42,7 @@ void Enemy::Update(float dt)
 
 void Enemy::OnCollision(Actor* other)
 {
-	if (other->GetTag() == "Bullet")
+	if (other->GetTag() == "PlayerBullet")
 	{
 		m_health -= 1.0f;
 

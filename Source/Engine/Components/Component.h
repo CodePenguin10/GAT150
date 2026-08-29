@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include "Framework/Object.h"
 
 namespace nu 
 {
@@ -16,8 +16,8 @@ namespace nu
 
 			virtual void Update(float dt) {}
 
-			Actor* GetOwner() { return m_owner; }
-			void SetOwnder(Actor* owner) { m_owner = owner; }
+			Actor* GetOwner() const { return m_owner; }
+			void SetOwner(Actor* owner) { m_owner = owner; }
 
 
 	protected:

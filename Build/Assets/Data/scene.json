@@ -30,6 +30,10 @@
         {
           "type": "SpriteRendererComponent",
           "texture": "assets/textures/player.png"
+        },
+        {
+          "type": "CircleColliderComponent",
+          "radius":  64.0
         }
       ]
     },
@@ -42,12 +46,21 @@
       "active": true,
       "speed": 800.0,
       "damping": 0.75,
-      "texture": "assets/textures/Fast_enemy.png",
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
         "scale": 1.0
-      }
+      },
+      "components": [
+        {
+          "type": "SpriteRendererComponent",
+          "texture": "assets/textures/Fast_enemy.png"
+        },
+        {
+          "type": "CircleColliderComponent",
+          "radius": 64.0
+        }
+      ]
     },
 
     {
@@ -58,13 +71,22 @@
       "active": true,
       "speed": 1500.0,
       "damping": 0.75,
-      "texture": "assets/textures/bullet.png",
-      "lifespan":  1.5,
+      "lifespan": 1.5,
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
         "scale": 1.0
-      }
+      },
+      "components": [
+        {
+          "type": "SpriteRendererComponent",
+          "texture": "assets/textures/bullet.png"
+        },
+        {
+          "type": "CircleColliderComponent",
+          "radius": 24.0
+        }
+      ]
     }
   ]
  
