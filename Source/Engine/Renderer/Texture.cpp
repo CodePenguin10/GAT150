@@ -7,6 +7,11 @@
 
 namespace nu
 {
+    Texture::Texture(SDL_Texture* texture)
+    {
+
+    }
+
     Texture::~Texture()
     {
         // if texture exists, destroy texture

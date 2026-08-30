@@ -3,14 +3,20 @@
     {
       "type": "Actor",
       "prototype": false,
-      "name": "Coin",
+      "name": "Bat",
       "tag": "Enemy",
       "active": true,
       "transform": {
         "position": [ 200.0, 200.0 ],
         "rotation": 0.0,
         "scale": 3.0
-      }
+      },
+      "components": [
+        {
+          "type": "SpriteRendererComponent",
+          "texture": "assets/textures/bat.png"
+        }
+      ]
     },
 
     {
@@ -33,7 +39,7 @@
         },
         {
           "type": "CircleColliderComponent",
-          "radius":  64.0
+          "radius": 64.0
         }
       ]
     },
