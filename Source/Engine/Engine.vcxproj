@@ -172,6 +172,7 @@
   <ItemGroup>
     <ClCompile Include="Audio\Audio.cpp" />
     <ClCompile Include="Components\CircleColliderComponent.cpp" />
+    <ClCompile Include="Components\SpriteAnimationRendererComponent.cpp" />
     <ClCompile Include="Components\SpriteRendererComponent.cpp" />
     <ClCompile Include="Core\File.cpp" />
     <ClCompile Include="Core\GameTime.cpp" />
@@ -197,6 +198,7 @@
     <ClInclude Include="Components\ColliderComponent.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\RendererComponent.h" />
+    <ClInclude Include="Components\SpriteAnimationRendererComponent.h" />
     <ClInclude Include="Components\SpriteRendererComponent.h" />
     <ClInclude Include="Core\Factory.h" />
     <ClInclude Include="Core\File.h" />

@@ -21,6 +21,7 @@ namespace nu
 	{
 		RendererComponent::Read(value);
 
+
 		std::string textureName;
 		JSON_READ_NAME(value, "texture", textureName);
 		if (!textureName.empty())

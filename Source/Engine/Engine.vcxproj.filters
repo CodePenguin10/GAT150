@@ -101,6 +101,9 @@
     <ClCompile Include="Components\CircleColliderComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
+    <ClCompile Include="Components\SpriteAnimationRendererComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Components\RendererComponent.h">
@@ -212,6 +215,9 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Components\CircleColliderComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\SpriteAnimationRendererComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
