@@ -16,7 +16,7 @@
           "type": "SpriteAnimationRendererComponent",
           "texture_frames": "assets/animations/bat_idle.json",
           "frames_per_second": 10,
-          "loop":  true
+          "loop": true
         }
       ]
     },

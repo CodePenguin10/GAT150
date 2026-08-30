@@ -3,6 +3,7 @@
 #include "Core/Factory.h"
 #include "Resources/ResourceManager.h"
 #include "Renderer/TextureFrames.h"
+#include "Math/MathUtility.h"
 #include "Engine.h"
 
 namespace nu
@@ -11,14 +12,32 @@ namespace nu
 
 	void SpriteAnimationRendererComponent::Update(float dt)
 	{
+		if (!m_textureFrames)
+		{
+			return;
+		}
+
 		m_frameTimer += dt;
 		float frameTime = 1.0f / m_framesPerSecond;
-		if (m_frameTimer >= frameTime)
-		{
-			m_frameTimer = 0.0f;
 
+		// increase frame while frame timer is greater than frame time
+		while (m_frameTimer >= frameTime)
+		{
 			m_frame++;
-			m_frame = m_frame % m_textureFrames->GetTotalFrames();
+			if (m_loop)
+			{
+				//loop forward
+				m_frame = Wrap(0u, m_textureFrames->GetTotalFrames() - 1, m_frame);
+				
+				//m_frame = m_frame % m_textureFrames->GetTotalFrames();
+			}
+			else
+			{
+				// stop on last frame
+				m_frame = Clamp(0u, m_frame = m_textureFrames->GetTotalFrames() - 1, m_frame);
+			}
+
+			m_frameTimer -= frameTime;
 		}
 	}
 
@@ -47,6 +66,10 @@ namespace nu
 		if (!texture_frames.empty())
 		{
 			m_textureFrames = Resources().Get<TextureFrames>(texture_frames, Engine::Get().GetRenderer());
+			if (!m_textureFrames)
+			{
+				std::cerr << "Could not load texture frames: " << texture_frames << std::endl;
+			}
 		}
 
 	}
