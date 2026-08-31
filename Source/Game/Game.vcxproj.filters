@@ -17,6 +17,9 @@
     <Filter Include="Resource Files\Animation">
       <UniqueIdentifier>{8050f4ea-1216-48a1-ba0c-20223993a07d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Tilemaps">
+      <UniqueIdentifier>{6a6a7637-7659-4511-ac03-612924723bf6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -64,6 +67,9 @@
     </None>
     <None Include="..\..\Build\Assets\Animations\bat_idle.json">
       <Filter>Resource Files\Animation</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\Tilemaps\world.json">
+      <Filter>Resource Files\Tilemaps</Filter>
     </None>
   </ItemGroup>
 </Project>

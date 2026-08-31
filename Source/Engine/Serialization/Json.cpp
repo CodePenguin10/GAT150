@@ -45,11 +45,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, int& data)
+    bool Read(const value_t& value, const std::string& name, int& data, bool required)
     {
         // check if the value has the "<name>" and the correct data type
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsInt())
         {
+            if (required)
             std::cerr << "Could not read JSON value (int):" << name << std::endl;
             return false;
         }
@@ -62,11 +63,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, unsigned int& data)
+    bool Read(const value_t& value, const std::string& name, unsigned int& data, bool required)
     {
         // check if the value has the "<name>" and the correct data type
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsInt())
         {
+            if (required)
             std::cerr << "Could not read JSON value (unsigned int):" << name << std::endl;
             return false;
         }
@@ -79,11 +81,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, float& data)
+    bool Read(const value_t& value, const std::string& name, float& data, bool required)
     {
         // check if the value has the "<name>" and the correct data type
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsFloat())
         {
+            if (required)
             std::cerr << "Could not read JSON value (float):" << name << std::endl;
             return false;
         }
@@ -96,11 +99,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, bool& data)
+    bool Read(const value_t& value, const std::string& name, bool& data, bool required)
     {
         // check if the value has the "<name>" and the correct data type
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsBool())
         {
+            if (required)
             std::cerr << "Could not read JSON value (bool):" << name << std::endl;
             return false;
         }
@@ -113,11 +117,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, std::string& data)
+    bool Read(const value_t& value, const std::string& name, std::string& data, bool required)
     {
         // check if the value has the "<name>" and the correct data type
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsString())
         {
+            if (required)
             std::cerr << "Could not read JSON value (string):" << name << std::endl;
             return false;
         }
@@ -130,11 +135,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, Vector2& data)
+    bool Read(const value_t& value, const std::string& name, Vector2& data, bool required)
     {
         // check if the value has the "<name>" and is an array with 2 elements
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 2)
         {
+            if (required)
             std::cerr << "Could not read JSON value (Vector2):" << name << std::endl;
             return false;
         }
@@ -159,11 +165,12 @@ namespace nu::json
         return true;
     }
 
-    bool Read(const value_t& value, const std::string& name, Vector3& data)
+    bool Read(const value_t& value, const std::string& name, Vector3& data, bool required)
     {
         // check if the value has the "<name>" and is an array with 2 elements
         if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray() || value[name.c_str()].Size() != 3)
         {
+            if (required)
             std::cerr << "Could not read JSON value (Vector3):" << name << std::endl;
             return false;
         }
@@ -181,6 +188,35 @@ namespace nu::json
 
             // get the data
             data[i] = array[i].GetFloat();
+        }
+
+        std::cout << "Read: " << name << std::endl;
+
+        return true;
+    }
+    bool Read(const value_t& value, const std::string& name, std::vector<int>& data, bool required)
+    {
+        // check if the value has the "<name>" and is an array with 2 elements
+        if (!value.HasMember(name.c_str()) || !value[name.c_str()].IsArray())
+        {
+            if (required)
+            std::cerr << "Could not read JSON value (Vector<int>):" << name << std::endl;
+            return false;
+        }
+
+        // get json array object
+        auto& array = value[name.c_str()];
+        // get array values, iterate through each element
+        for (rapidjson::SizeType i = 0; i < array.Size(); i++)
+        {
+            if (!array[i].IsNumber())
+            {
+                std::cerr << "Could not read JSON value (Vector<int>):" << name << std::endl;
+                return false;
+            }
+
+            // get the data
+            data.push_back(array[i].GetInt());
         }
 
         std::cout << "Read: " << name << std::endl;

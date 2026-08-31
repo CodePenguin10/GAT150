@@ -42,6 +42,7 @@
     <None Include="..\..\Build\Assets\Animations\bat_idle.json" />
     <None Include="..\..\Build\Assets\Data\data.json" />
     <None Include="..\..\Build\Assets\Data\scene.json" />
+    <None Include="..\..\Build\Assets\Tilemaps\world.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

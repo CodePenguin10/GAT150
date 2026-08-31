@@ -28,7 +28,6 @@ namespace nu
 		GetOwner()->SetRotation(GetRotation() * RadToDeg);
 	}
 
-
 	void Box2DPhysicsComponent::ApplyForce(const Vector2& force)
 	{
 		m_physicsBody->ApplyForce(force);

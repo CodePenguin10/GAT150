@@ -6,6 +6,7 @@
       "name": "Bat",
       "tag": "Enemy",
       "active": true,
+      "persistent":  true,
       "transform": {
         "position": [ 200.0, 200.0 ],
         "rotation": 0.0,
@@ -45,10 +46,6 @@
           "angular_damping": 22.0,
           "size": [ 48, 48 ],
           "gravity_scale":  0
-        },
-        {
-          "type": "CircleColliderComponent",
-          "radius": 64.0
         }
       ]
     },
@@ -77,10 +74,6 @@
           "angular_damping": 22.0,
           "size": [ 48, 48 ],
           "gravity_scale": 0
-        },
-        {
-          "type": "CircleColliderComponent",
-          "radius": 64.0
         }
       ]
     },
@@ -109,11 +102,8 @@
           "linear_damping": 22.0,
           "angular_damping": 22.0,
           "size": [ 48, 48 ],
-          "gravity_scale": 0
-        },
-        {
-          "type": "CircleColliderComponent",
-          "radius": 24.0
+          "gravity_scale": 0,
+          "is_sensor":  true
         }
       ]
     }

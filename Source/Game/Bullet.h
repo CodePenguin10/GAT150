@@ -14,6 +14,8 @@ public:
 
     CLASS_PROTOTYPE(Bullet)
 
+        void Read(const nu::json::value_t& value) override;
+
     void Update(float dt) override;
 
 private:
