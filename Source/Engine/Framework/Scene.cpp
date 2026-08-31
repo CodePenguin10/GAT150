@@ -74,17 +74,24 @@ namespace nu
 		UpdateCollisions();
 
 		// remove destroyed actors
+		for (auto& actor : m_actors)
+		{
+			if (actor->m_destroyed)
+			{
+				actor->Destroy();
+			}
+		}
+
 		std::erase_if(m_actors, [](auto& actor) { return actor->m_destroyed; });
 
 		//add pending actors
 		for (auto& actor : m_pendingActors)
 		{
+			actor->Start();
 			m_actors.push_back(std::move(actor));
 		}
 
 		m_pendingActors.clear();
-
-		//m_actors.insert(m_actors.end(), m_pendingActors.begin(), m_pendingActors.end());
 	}
 
 	void Scene::Draw(const class Renderer& renderer)

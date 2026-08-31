@@ -20,8 +20,6 @@ namespace nu
         std::string name;
         std::string tag;
         Transform transform{ 0.0f, 0.0f, 0.0f };
-        Vector2 velocity{ 0.0f, 0.0f };
-        float damping{ 0.0f };
         float lifespan{ 0.0f };
         res_t<Model> model;
         res_t<Texture> texture;
@@ -31,14 +29,17 @@ namespace nu
     {
     public:
         Actor() = default;
-        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_velocity{ actorDesc.velocity }, m_damping{ actorDesc.damping }, m_lifespan{ actorDesc.lifespan } {}
+        Actor(const ActorDesc& actorDesc) : m_tag{ actorDesc.tag }, m_transform{ actorDesc.transform }, m_lifespan{ actorDesc.lifespan } {}
 
         Actor(const Actor& other);
 
         CLASS_PROTOTYPE(Actor)
 
-            virtual void Update(float dt);
+        virtual void Update(float dt);
         virtual void Draw(const class Renderer& renderer);
+
+        virtual void Start();
+        virtual void Destroy();
 
         virtual void OnCollision(Actor* other) {}
 
@@ -48,10 +49,6 @@ namespace nu
         void SetRotation(float rotation) { m_transform.rotation = rotation; }
         void SetScale(float scale) { m_transform.scale = scale; }
         void SetTag(std::string tag) { m_tag = tag; }
-
-        const Vector2& GetVelocity() const { return m_velocity; }
-        void SetVelocity(const Vector2& velocity) { m_velocity = velocity; }
-        void AddVelocity(const Vector2& velocity) { m_velocity += velocity; }
 
         const std::string& GetName() const { return m_name; }
         const std::string& GetTag() const { return m_tag; }
@@ -76,8 +73,6 @@ namespace nu
         std::string m_tag;
 
         Transform m_transform;
-        Vector2 m_velocity{ 0.0f, 0.0f };
-        float m_damping{ 0.0f };
         float m_lifespan{ 0.0f };
         bool m_destroyed{ false };
 

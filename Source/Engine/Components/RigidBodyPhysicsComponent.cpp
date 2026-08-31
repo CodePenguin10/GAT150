@@ -68,6 +68,16 @@ namespace nu
         return GetOwner()->GetTransform().position;
     }
 
+    void RigidBodyPhysicsComponent::SetRotation(float rotation)
+    {
+        GetOwner()->SetRotation(rotation);
+    }
+
+    Vector2 RigidBodyPhysicsComponent::GetRotation() const
+    {
+        return GetOwner()->GetTransform().rotation;
+    }
+
     void RigidBodyPhysicsComponent::Read(const json::value_t& value)
     {
         PhysicsComponent::Read(value);
@@ -75,5 +85,7 @@ namespace nu
         JSON_READ_NAME(value, "velocity", m_velocity);
         JSON_READ_NAME(value, "angular_velocity", m_angularVelocity);
     }
+
+
 
 }

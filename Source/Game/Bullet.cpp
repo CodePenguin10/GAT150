@@ -1,15 +1,21 @@
 #include "Bullet.h"
 #include "Math/MathUtility.h"
+#include "Components/PhysicsComponent.h"
 #include "Engine.h"
 
 FACTORY_REGISTER(Bullet)
 
 void Bullet::Update(float dt)
 {
-	nu::Vector2 forward{ 1.0f, 0.0f };
-	nu::Vector2 velocity = forward.Rotate(m_transform.rotation * nu::DegToRad) * m_speed;
+	nu::PhysicsComponent* physicsComponent = GetComponent<nu::PhysicsComponent>();
+	if (physicsComponent)
+	{
+		nu::Vector2 forward{ 1, 0 }; // ->
+		nu::Vector2 force = forward.Rotate(m_transform.rotation * nu::DegToRad) * m_speed;
 
-	SetVelocity(velocity);
+		physicsComponent->SetVelocity(force);
+		//physicsComponent->ApplyTorque(rotate);
+	}
 
 	Actor::Update(dt);
 }

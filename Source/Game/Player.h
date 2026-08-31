@@ -23,6 +23,6 @@ public:
 
 private:
     int ammo = 0;
-    float m_speed = 1000.0f;
+    float m_speed = 750.0f;
     float m_fireTimer = 0.0f;
 };

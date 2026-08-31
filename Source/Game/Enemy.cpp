@@ -3,6 +3,7 @@
 #include "Renderer/Renderer.h"
 #include "Player.h"
 #include "SpaceGame.h"
+#include "Components/PhysicsComponent.h"
 
 #include <iostream>
 
@@ -15,13 +16,18 @@ void Enemy::Update(float dt)
 	Actor* player = m_scene->GetActorByName<Actor>("PlayerPrototype");
 	if (player)
 	{
+		nu::PhysicsComponent* physicsComponent = GetComponent<nu::PhysicsComponent>();
+		if (physicsComponent)
+		{
+			nu::Vector2 forward{ 1, 0 }; // ->
+			nu::Vector2 force = forward.Rotate(m_transform.rotation * DegToRad) * m_speed;
+
+			physicsComponent->ApplyForce(force);
+		}
+
 		nu::Vector2 direction = player->GetTransform().position - m_transform.position;
 		float rotation = direction.Angle();
-		SetRotation(rotation * nu::RadToDeg);
-
-		nu::Vector2 velocity{ 1,0 };
-		velocity = velocity.Rotate(m_transform.rotation * nu::DegToRad);
-		AddVelocity(velocity * m_speed * dt);
+		physicsComponent->SetRotation(rotation * nu::RadToDeg);
 	}
 
 	//particle system

@@ -22,6 +22,9 @@ namespace nu
 		void SetPosition(const Vector2& position) override;
 		Vector2 GetPosition() const override;
 
+		void SetRotation(float roation) override;
+		Vector2 GetRotation() const override;
+
 		void Read(const json::value_t& value) override;
 
 	private:
