@@ -9,16 +9,18 @@ using namespace nu;
 
 bool SpaceGame::Initialize()
 {
+	SetWorkingDirectory("SpaceGame");
+
 	Game::Initialize();
 
-	m_scene = new Scene();
+	m_scene = std::unique_ptr<Scene>();
 	m_scene->SetGame(this);
-	m_scene->Load("assets/data/scene.json");
+	m_scene->Load("data/scene.json");
 
-	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "assets/fonts/Private Teacher.ttf", 128.0f));
+	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "fonts/Private Teacher.ttf", 128.0f));
 	m_titleText->Create(Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
 
-	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "assets/fonts/Private Teacher.ttf", 32.0f));
+	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "fonts/Private Teacher.ttf", 32.0f));
 	m_livesText = new Text(Resources().Get<Font>("game_font", 32.0f));
 
 
@@ -80,7 +82,7 @@ void SpaceGame::Update(float dt)
 
 void SpaceGame::Draw(class nu::Renderer& renderer)
 {
-	renderer.DrawTexture(*nu::Resources().Get<Texture>("assets/textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
+	renderer.DrawTexture(*nu::Resources().Get<Texture>("textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
 
 	switch (m_gameState)
 	{

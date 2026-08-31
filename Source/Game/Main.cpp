@@ -1,9 +1,10 @@
 #include "Engine.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "Assets.h"
-#include "Bullet.h"
-#include "SpaceGame.h"
+#include "SpaceGame/Player.h"
+#include "SpaceGame/Enemy.h"
+#include "SpaceGame/Assets.h"
+#include "SpaceGame/Bullet.h"
+#include "SpaceGame/SpaceGame.h"
+#include "SpriteGame/SpriteGame.h"
 
 #include <fmod.hpp>
 #include <iostream>
@@ -17,11 +18,13 @@ using namespace nu;
 
 int main()
 {
+    SetWorkingDirectory("Assets");
+
     // INITILALIZATION
     Engine::Get().Initialize();
 
-    SpaceGame game;
-    game.Initialize();
+    std::unique_ptr game = make_unique<SpriteGame>();
+    game->Initialize();
 
     // MAIN LOOP
     bool quit = false;
@@ -56,6 +59,9 @@ int main()
 
 	    Engine::Get().GetRenderer().Present();
     }
+
+    // DELETE GAME
+    game.reset();
 
     // SHUTDOWN
     Engine::Get().Shutdown();

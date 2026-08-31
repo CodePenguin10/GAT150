@@ -20,56 +20,57 @@
     <Filter Include="Resource Files\Tilemaps">
       <UniqueIdentifier>{6a6a7637-7659-4511-ac03-612924723bf6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SpaceGame">
+      <UniqueIdentifier>{1da2bbdf-3074-48de-8a0f-707dcfa3978e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpriteGame">
+      <UniqueIdentifier>{95bc4235-01c8-478b-9b3c-17aec949e1ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SpaceGame\Bullet.cpp">
+      <Filter>SpaceGame</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="SpaceGame\Enemy.cpp">
+      <Filter>SpaceGame</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="SpaceGame\Player.cpp">
+      <Filter>SpaceGame</Filter>
     </ClCompile>
-    <ClCompile Include="Assets.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="SpaceGame\SpaceGame.cpp">
+      <Filter>SpaceGame</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="SpaceGame\Assets.cpp">
+      <Filter>SpaceGame</Filter>
     </ClCompile>
-    <ClCompile Include="SpaceGame.cpp">
-      <Filter>Source</Filter>
+    <ClCompile Include="SpriteGame\SpriteGame.cpp">
+      <Filter>SpriteGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Assets.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SpaceGame\Bullet.h">
+      <Filter>SpaceGame</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SpaceGame\Enemy.h">
+      <Filter>SpaceGame</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SpaceGame\Player.h">
+      <Filter>SpaceGame</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SpaceGame\SpaceGame.h">
+      <Filter>SpaceGame</Filter>
     </ClInclude>
-    <ClInclude Include="SpaceGame.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="SpaceGame\Assets.h">
+      <Filter>SpaceGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteGame\SpriteGame.h">
+      <Filter>SpriteGame</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Build\Assets\Data\data.json">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="..\..\Build\Assets\Data\scene.json">
-      <Filter>Resource Files\Scenes</Filter>
-    </None>
     <None Include="..\..\Build\Assets\Animations\bat_idle.json">
       <Filter>Resource Files\Animation</Filter>
-    </None>
-    <None Include="..\..\Build\Assets\Tilemaps\world.json">
-      <Filter>Resource Files\Tilemaps</Filter>
     </None>
   </ItemGroup>
 </Project>
