@@ -34,7 +34,7 @@ namespace nu
 
 		void SetRotation(float rotation) override;
 
-		Vector2 GetRotation() const override;
+		float GetRotation() const override;
 
 	private:
 		Vector2 m_size{ 0.0f, 0.0f };

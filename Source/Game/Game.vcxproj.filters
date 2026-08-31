@@ -69,7 +69,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Build\Assets\Animations\bat_idle.json">
+    <None Include="..\..\Build\Assets\SpriteGame\Data\scene.json">
+      <Filter>Resource Files\Scenes</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\bat_idle.json">
       <Filter>Resource Files\Animation</Filter>
     </None>
   </ItemGroup>

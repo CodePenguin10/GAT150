@@ -73,7 +73,7 @@ namespace nu
         GetOwner()->SetRotation(rotation);
     }
 
-    Vector2 RigidBodyPhysicsComponent::GetRotation() const
+    float RigidBodyPhysicsComponent::GetRotation() const
     {
         return GetOwner()->GetTransform().rotation;
     }

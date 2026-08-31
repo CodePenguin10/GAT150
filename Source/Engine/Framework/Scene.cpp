@@ -14,7 +14,6 @@ namespace nu
 
 	void Scene::RemoveAllActors(bool force)
 	{
-
 		std::erase_if(m_actors, [force](auto& actor) { return actor->GetPersistent() || force; });
 	}
 

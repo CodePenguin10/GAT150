@@ -15,7 +15,7 @@
       "components": [
         {
           "type": "SpriteAnimationRendererComponent",
-          "texture_frames": "assets/animations/bat_idle.json",
+          "texture_frames": "animations/bat_idle.json",
           "frames_per_second": 10,
           "loop": true
         }
@@ -29,7 +29,7 @@
       "tag": "Player",
       "active": true,
       "speed": 750.0,
-      "damping": 23.0,
+      "damping": 2.0,
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
@@ -38,12 +38,12 @@
       "components": [
         {
           "type": "SpriteRendererComponent",
-          "texture": "assets/textures/player.png"
+          "texture": "textures/player.png"
         },
         {
           "type": "Box2DPhysicsComponent",
-          "linear_damping": 22.0,
-          "angular_damping": 22.0,
+          "linear_damping": 2.0,
+          "angular_damping": 2.0,
           "size": [ 48, 48 ],
           "gravity_scale":  0
         }
@@ -66,12 +66,12 @@
       "components": [
         {
           "type": "SpriteRendererComponent",
-          "texture": "assets/textures/Fast_enemy.png"
+          "texture": "textures/Fast_enemy.png"
         },
         {
           "type": "Box2DPhysicsComponent",
-          "linear_damping": 22.0,
-          "angular_damping": 22.0,
+          "linear_damping": 2.0,
+          "angular_damping": 2.0,
           "size": [ 48, 48 ],
           "gravity_scale": 0
         }
@@ -95,12 +95,12 @@
       "components": [
         {
           "type": "SpriteRendererComponent",
-          "texture": "assets/textures/bullet.png"
+          "texture": "textures/bullet.png"
         },
         {
           "type": "Box2DPhysicsComponent",
-          "linear_damping": 22.0,
-          "angular_damping": 22.0,
+          "linear_damping": 2.0,
+          "angular_damping": 2.0,
           "size": [ 48, 48 ],
           "gravity_scale": 0,
           "is_sensor":  true

@@ -10,7 +10,7 @@ bool SpriteGame::Initialize()
 
 	Game::Initialize();
 
-	m_scene = std::unique_ptr<Scene>();
+	m_scene = std::make_unique<Scene>();
 	m_scene->SetGame(this);
 	m_scene->Load("data/scene.json");
 
@@ -79,7 +79,7 @@ void SpriteGame::Update(float dt)
 
 void SpriteGame::Draw(class nu::Renderer& renderer)
 {
-	renderer.DrawTexture(*nu::Resources().Get<Texture>("assets/textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
+	renderer.DrawTexture(*nu::Resources().Get<Texture>("textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
 
 	switch (m_gameState)
 	{

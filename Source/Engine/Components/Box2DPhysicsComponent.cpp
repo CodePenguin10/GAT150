@@ -3,6 +3,7 @@
 #include "Core/Factory.h"
 #include "Framework/Actor.h"
 #include "Math/MathUtility.h"
+#include "Math/Vector2.h"
 #include "Engine.h"
 
 namespace nu
@@ -73,7 +74,7 @@ namespace nu
 		m_physicsBody->SetRotation(rotation);
 	}
 
-	Vector2 Box2DPhysicsComponent::GetRotation() const
+	float Box2DPhysicsComponent::GetRotation() const
 	{
 		return m_physicsBody->GetRotation();
 	}

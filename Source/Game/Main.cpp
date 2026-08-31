@@ -23,7 +23,7 @@ int main()
     // INITILALIZATION
     Engine::Get().Initialize();
 
-    std::unique_ptr game = make_unique<SpriteGame>();
+    std::unique_ptr game = std::make_unique<SpriteGame>();
     game->Initialize();
 
     // MAIN LOOP
@@ -47,14 +47,14 @@ int main()
         float dt = Engine::Get().GetTime().GetDeltaTime();
 
         // GAME
-        game.Update(dt);
+        game->Update(dt);
 		
 
         // RENDER
         Engine::Get().GetRenderer().SetColor(0.0f, 0.0f, 0.0f);
 		Engine::Get().GetRenderer().Clear();
 
-        game.Draw(Engine::Get().GetRenderer());
+        game->Draw(Engine::Get().GetRenderer());
         Engine::Get().GetPS().Draw(Engine::Get().GetRenderer());
 
 	    Engine::Get().GetRenderer().Present();

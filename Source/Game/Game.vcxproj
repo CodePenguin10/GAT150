@@ -41,7 +41,8 @@
     <ClInclude Include="SpriteGame\SpriteGame.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Build\Assets\Animations\bat_idle.json" />
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\bat_idle.json" />
+    <None Include="..\..\Build\Assets\SpriteGame\Data\scene.json" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

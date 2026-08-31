@@ -13,7 +13,7 @@ bool SpaceGame::Initialize()
 
 	Game::Initialize();
 
-	m_scene = std::unique_ptr<Scene>();
+	m_scene = std::make_unique<Scene>();
 	m_scene->SetGame(this);
 	m_scene->Load("data/scene.json");
 

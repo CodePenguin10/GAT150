@@ -17,7 +17,6 @@ public:
 
 public:
 	SpriteGame() = default;
-	SpriteGame(nu::Scene* scene) : nu::Game{ scene } {}
 
 	bool Initialize() override;
 

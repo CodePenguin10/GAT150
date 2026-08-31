@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 
 namespace nu
 {
@@ -19,6 +20,6 @@ namespace nu
 		void SetScene(std::unique_ptr<Scene> scene);
 
 	protected:
-		std::unique_ptr<Scene> m_scene = nullptr;
+		std::unique_ptr<Scene> m_scene{ nullptr };
 	};
 }

@@ -18,7 +18,7 @@ namespace nu
 		virtual Vector2 GetPosition() const = 0;
 
 		virtual void SetRotation(float rotation) = 0;
-		virtual Vector2 GetRotation() const = 0;
+		virtual float GetRotation() const = 0;
 
 		virtual void Read(const json::value_t& value);
 
