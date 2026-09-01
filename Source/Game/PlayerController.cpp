@@ -1,10 +1,12 @@
-#include "pch.h"
 #include "PlayerController.h"
 #include "Components/PhysicsComponent.h"
 #include "Components/SpriteAnimationRendererComponent.h"
+#include "Core/Factory.h"
 #include "Engine.h"
 
 using namespace nu;
+
+FACTORY_REGISTER(PlayerController)
 
 void PlayerController::Start()
 {
@@ -18,17 +20,23 @@ void PlayerController::Start()
 
 void PlayerController::Update(float dt)
 {
+	Vector2 velocity = m_physicsComponent->GetVelocity();
+
 	float dir = 0.0f;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_A)) dir = -1.0f;
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_D)) dir = 1.0f;
+	if (Engine::Get().GetInput().GetKeyPressed(SDL_SCANCODE_SPACE))
+	{
+		velocity.y = -100.0f;
+	}
 
-	Vector2 velocity = m_physicsComponent->GetVelocity();
 	if (dir != 0)
 	{
-		velocity.x = dir * 1000;
+		velocity.x = dir * 100.0f;
 	}
 
 	m_physicsComponent->SetVelocity(velocity);
+	Engine::Get().GetRenderer().SetCamera(m_physicsComponent->GetPosition());
 
 	Actor::Update(dt);
 }
