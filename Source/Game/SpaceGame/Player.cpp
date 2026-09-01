@@ -31,11 +31,11 @@ void Player::Update(float dt)
 		physicsComponent->ApplyForce(force);
 		physicsComponent->ApplyTorque(rotate);
 
-		//Vector2 position = physicsComponent->GetPosition();
-		
+		Vector2 position = physicsComponent->GetPosition();
 		//position.x = Wrap(0.0f, 1280.0f, position.x);
 		//position.y = Wrap(0.0f, 1280.0f, position.y);
 		//physicsComponent->SetPosition(position);
+		Engine::Get().GetRenderer().SetCamera(position);
 	}
 
 

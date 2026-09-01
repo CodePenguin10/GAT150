@@ -13,7 +13,7 @@ bool SpriteGame::Initialize()
 	m_scene = std::make_unique<Scene>();
 	m_scene->SetGame(this);
 	m_scene->Load("data/scene.json");
-	m_scene->Load("data/world.json");
+	m_scene->Load("tilemaps/world.json");
 
 	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "fonts/Private Teacher.ttf", 128.0f));
 	m_titleText->Create(Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
@@ -80,6 +80,8 @@ void SpriteGame::Update(float dt)
 
 void SpriteGame::Draw(class nu::Renderer& renderer)
 {
+	renderer.EnableCamera(false);
+
 	renderer.DrawTexture(*nu::Resources().Get<Texture>("textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
 
 	switch (m_gameState)
@@ -104,6 +106,8 @@ void SpriteGame::Draw(class nu::Renderer& renderer)
 	default:
 		break;
 	}
+	renderer.EnableCamera(true);
+
 	Game::Draw(renderer);
 }
 

@@ -18,31 +18,36 @@ namespace nu
 
         SDL_Init(SDL_INIT_VIDEO);
 
-        if (!SDL_Init(SDL_INIT_VIDEO)) {
+        if (!SDL_Init(SDL_INIT_VIDEO)) 
+        {
             std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
             return false;
         }
 
-        if (!TTF_Init()) {
+        if (!TTF_Init()) 
+        {
             std::cerr << "TTF_Init Error: " << SDL_GetError() << std::endl;
             return false;
         }
 
         m_window = SDL_CreateWindow(name, width, height, 0);
-        if (m_window == nullptr) {
+        if (m_window == nullptr) 
+        {
             std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
             SDL_Quit();
             return false;
         }
 
         m_renderer = SDL_CreateRenderer(m_window, NULL);
-        if (m_renderer == nullptr) {
+        if (m_renderer == nullptr) 
+        {
             std::cerr << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
             SDL_DestroyWindow(m_window);
             SDL_Quit();
             return false;
         }
 
+        SDL_SetDefaultTextureScaleMode(m_renderer, SDL_SCALEMODE_PIXELART);
         SDL_SetRenderVSync(m_renderer, 1);
 
         return true;
@@ -130,18 +135,24 @@ namespace nu
     {
         Vector2 size = texture.GetSize();
 
+		float camerax = (m_cameraEnabled) ? m_camera.x - m_width  : 0.0f;
+		float cameray = (m_cameraEnabled) ? m_camera.y - m_height : 0.0f;
+
         SDL_FRect destRect;
         destRect.w = size.x * scale;
         destRect.h = size.y * scale;
 
-        destRect.x = x - (destRect.w *0.5f);
-        destRect.y = y - (destRect.h * 0.5f);
+        destRect.x = (x - camerax) - (destRect.w *0.5f);
+        destRect.y = (y - cameray) - (destRect.h * 0.5f);
 
 		SDL_RenderTextureRotated(m_renderer, texture.m_texture, NULL, &destRect, angle, NULL, (flipH) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
     }
 
     void Renderer::DrawTexture(const Texture& texture, const Rect& source, float x, float y, float angle, float scale, bool flipH) const
     {
+        float camerax = (m_cameraEnabled) ? m_camera.x : 0.0f;
+        float cameray = (m_cameraEnabled) ? m_camera.y : 0.0f;
+
         SDL_FRect sourceRect;
         sourceRect.x = source.x;
         sourceRect.y = source.y;
@@ -152,8 +163,8 @@ namespace nu
         destRect.w = source.w * scale;
         destRect.h = source.h * scale;
 
-        destRect.x = x - (destRect.w * 0.5f);
-        destRect.y = y - (destRect.h * 0.5f);
+        destRect.x = (x - camerax) - (destRect.w * 0.5f);
+        destRect.y = (y - cameray) - (destRect.h * 0.5f);
 
         SDL_RenderTextureRotated(m_renderer, texture.m_texture,  &sourceRect, &destRect, angle, NULL, (flipH) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
     }

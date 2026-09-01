@@ -47,6 +47,9 @@
     <ClCompile Include="SpriteGame\SpriteGame.cpp">
       <Filter>SpriteGame</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>SpriteGame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SpaceGame\Bullet.h">
@@ -65,6 +68,9 @@
       <Filter>SpaceGame</Filter>
     </ClInclude>
     <ClInclude Include="SpriteGame\SpriteGame.h">
+      <Filter>SpriteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
       <Filter>SpriteGame</Filter>
     </ClInclude>
   </ItemGroup>
