@@ -75,5 +75,8 @@
     <None Include="..\..\Build\Assets\SpriteGame\Animations\bat_idle.json">
       <Filter>Resource Files\Animation</Filter>
     </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Tilemaps\world.json">
+      <Filter>Resource Files\Tilemaps</Filter>
+    </None>
   </ItemGroup>
 </Project>
