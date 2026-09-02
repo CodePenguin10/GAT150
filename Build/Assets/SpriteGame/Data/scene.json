@@ -86,13 +86,31 @@
           "animations": [
             {
               "name": "Idle",
-              "texture_frames": "animations/Hero_idle.json",
+              "texture_frames": "animations/hero_idle.json",
               "frames_per_second": 10,
               "loop": true
             },
             {
               "name": "Run",
-              "texture_frames": "animations/Hero_run.json",
+              "texture_frames": "animations/hero_run.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Jump",
+              "texture_frames": "animations/hero_jump.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Attack",
+              "texture_frames": "animations/hero_attack.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Death",
+              "texture_frames": "animations/hero_death.json",
               "frames_per_second": 10,
               "loop": true
             }
@@ -130,13 +148,25 @@
           "animations": [
             {
               "name": "Idle",
-              "texture_frames": "animations/Hero_idle.json",
+              "texture_frames": "animations/enemy_idle.json",
               "frames_per_second": 10,
               "loop": true
             },
             {
               "name": "Run",
-              "texture_frames": "animations/Hero_run.json",
+              "texture_frames": "animations/enemy_run.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Hit",
+              "texture_frames": "animations/enemy_hit.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Attack",
+              "texture_frames": "animations/enemy_attack.json",
               "frames_per_second": 10,
               "loop": true
             }
@@ -174,13 +204,19 @@
           "animations": [
             {
               "name": "Idle",
-              "texture_frames": "animations/Hero_idle.json",
+              "texture_frames": "animations/eye_idle.json",
               "frames_per_second": 10,
               "loop": true
             },
             {
-              "name": "Run",
-              "texture_frames": "animations/Hero_run.json",
+              "name": "Hit",
+              "texture_frames": "animations/eye_hit.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Attack",
+              "texture_frames": "animations/eye_attack.json",
               "frames_per_second": 10,
               "loop": true
             }

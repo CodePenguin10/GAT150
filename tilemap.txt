@@ -1,0 +1,19 @@
+    {
+      "type": "Actor",
+      "prototype": false,
+      "name": "Tilemap",
+      "tag": "Ground",
+      "active": true,
+      "persistent": true,
+      "transform": {
+        "position": [ 0.0, 0.0 ],
+        "rotation": 0.0,
+        "scale": 5.0
+      },
+      "components": [
+        {
+          "type": "TilemapRendererComponent",
+          "texture_frames": "Tilemaps/world.json"
+        }
+      ]
+    },

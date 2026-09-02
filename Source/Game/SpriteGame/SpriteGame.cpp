@@ -83,7 +83,7 @@ void SpriteGame::Draw(class nu::Renderer& renderer)
 {
 	renderer.EnableCamera(false);
 
-	renderer.DrawTexture(*nu::Resources().Get<Texture>("textures/background.jpg", Engine::Get().GetRenderer()), 500.0f, 500.0f);
+	renderer.DrawTexture(*nu::Resources().Get<Texture>("textures/bg03.png", Engine::Get().GetRenderer()), 500.0f, 500.0f);
 
 	switch (m_gameState)
 	{
