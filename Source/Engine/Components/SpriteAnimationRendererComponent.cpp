@@ -39,7 +39,7 @@ namespace nu
 		}
 
 		m_frameTimer += dt;
-		float frameTime = 1.0f / m_framesPerSecond;
+		float frameTime = 1.0f / m_frames_per_second;
 
 		// increase frame while frame timer is greater than frame time
 		while (m_frameTimer >= frameTime)
@@ -68,7 +68,7 @@ namespace nu
 	{
 		RendererComponent::Read(value);
 
-		JSON_READ_NAME(value, "frames_per_second", m_framesPerSecond);
+		JSON_READ_NAME(value, "frames_per_second", m_frames_per_second);
 		JSON_READ_NAME(value, "loop", m_loop);
 
 		std::string texture_frames;

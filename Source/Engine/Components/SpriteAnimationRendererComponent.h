@@ -15,7 +15,7 @@ namespace nu
 		void Read(const json::value_t& value) override;
 
 	private:
-		float m_framesPerSecond = 1.0f;
+		float m_frames_per_second = 1.0f;
 		bool m_loop = true;
 
 		unsigned int m_frame = 0;;

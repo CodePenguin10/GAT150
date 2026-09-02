@@ -71,6 +71,12 @@
     <ClCompile Include="SpriteGame\FlyingEnemyController.cpp">
       <Filter>SpriteGame</Filter>
     </ClCompile>
+    <ClCompile Include="SpriteGame\CharacterBase.cpp">
+      <Filter>SpriteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteGame\Damager.cpp">
+      <Filter>SpriteGame</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SpaceGame\Bullet.h">
@@ -100,6 +106,12 @@
     <ClInclude Include="SpriteGame\FlyingEnemyController.h">
       <Filter>SpriteGame</Filter>
     </ClInclude>
+    <ClInclude Include="SpriteGame\CharacterBase.h">
+      <Filter>SpriteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteGame\Damager.h">
+      <Filter>SpriteGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Build\Assets\SpaceGame\Animations\bat_idle.json">
@@ -120,17 +132,44 @@
     <None Include="..\..\Build\Assets\SpriteGame\Tilemaps\world.json">
       <Filter>Assets\SpriteGame\Tilemaps</Filter>
     </None>
-    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_run.json">
-      <Filter>Assets\SpriteGame\Animations</Filter>
-    </None>
-    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_attack.json">
-      <Filter>Assets\SpriteGame\Animations</Filter>
-    </None>
-    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_idle.json">
-      <Filter>Assets\SpriteGame\Animations</Filter>
-    </None>
     <None Include="..\..\Build\Assets\SpriteGame\Data\level.json">
       <Filter>Assets\SpriteGame\Scenes</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\enemy_attack.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\enemy_hit.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\enemy_idle.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\enemy_run.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\eye_attack.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\eye_hit.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\eye_idle.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\hero_attack.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\hero_death.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\hero_idle.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\hero_jump.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\hero_run.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
     </None>
   </ItemGroup>
 </Project>

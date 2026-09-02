@@ -1,70 +1,6 @@
 {
   "actors": [
-    {
-      "type": "Actor",
-      "prototype": true,
-      "name": "CratePrototype",
-      "tag": "Prop",
-      "active": true,
-      "transform": {
-        "position": [ 0.0, 0.0 ],
-        "rotation": 0.0,
-        "scale": 1.0
-      },
-      "components": [
-        {
-          "type": "SpriteRendererComponent",
-          "texture": "textures/crate03.png"
-        },
-        {
-          "type": "Box2DPhysicsComponent",
-          "linear_damping": 2.0,
-          "angular_damping": 2.0,
-          "size": [ 100, 100 ],
-          "gravity_scale": 1
-        }
-      ]
-    },
-    {
-      "type": "Actor",
-      "prototype": true,
-      "name": "BatPrototype",
-      "tag": "Enemy",
-      "active": true,
-      "persistent": true,
-      "transform": {
-        "position": [ 200.0, 200.0 ],
-        "rotation": 0.0,
-        "scale": 1.0
-      },
-      "components": [
-        {
-          "type": "SpriteAnimatorRendererComponent",
-          "default_animation": "Idle",
-          "animations": [
-            {
-              "name": "Idle",
-              "texture_frames": "animations/Hero_idle.json",
-              "frames_per_second": 10,
-              "loop": true
-            },
-            {
-              "name": "Run",
-              "texture_frames": "animations/Hero_run.json",
-              "frames_per_second": 10,
-              "loop": true
-            }
-          ]
-        },
-        {
-          "type": "Box2DPhysicsComponent",
-          "linear_damping": 2.0,
-          "angular_damping": 2.0,
-          "size": [ 48, 48 ],
-          "gravity_scale": 3
-        }
-      ]
-    },
+  
 
     {
       "type": "PlayerController",
@@ -83,6 +19,7 @@
         {
           "type": "SpriteAnimatorRendererComponent",
           "default_animation": "Idle",
+          "origin": [ 0.5, 0.5 ],
           "animations": [
             {
               "name": "Idle",
@@ -121,7 +58,7 @@
           "linear_damping": 2.0,
           "angular_damping": 2.0,
           "shape": "Capsule",
-          "size": [ 48, 48 ],
+          "size": [ 34, 48 ],
           "constrain_angle": true,
           "gravity_scale": 1
         }
@@ -136,10 +73,11 @@
       "active": true,
       "speed": 750.0,
       "damping": 2.0,
+      "health": 10.0,
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
-        "scale": 3.0
+        "scale": 2.5
       },
       "components": [
         {
@@ -192,6 +130,7 @@
       "active": true,
       "speed": 750.0,
       "damping": 2.0,
+      "health": 10.0,
       "transform": {
         "position": [ 640.0, 512.0 ],
         "rotation": 0.0,
@@ -226,8 +165,40 @@
           "type": "Box2DPhysicsComponent",
           "linear_damping": 2.0,
           "angular_damping": 2.0,
-          "shape": "Capsule",
+          "shape": "Circle",
           "size": [ 48, 48 ],
+          "constrain_angle": true,
+          "gravity_scale": 0,
+          "is_sensor": true
+        }
+      ]
+    },
+
+    {
+      "type": "Damager",
+      "prototype": true,
+      "name": "DamagerPrototype",
+      "tag": "Enemy",
+      "active": true,
+      "damage": 5.0,
+      "lifespan": 0.5,
+      "transform": {
+        "position": [ 640.0, 512.0 ],
+        "rotation": 0.0,
+        "scale": 1.0
+      },
+      "components": [
+        {
+          "type": "SpriteRendererComponent",
+          "texture": "textures/damager.png",
+          "active":  true
+        },
+        {
+          "type": "Box2DPhysicsComponent",
+          "linear_damping": 2.0,
+          "angular_damping": 2.0,
+          "shape": "Circle",
+          "size": [ 20, 20 ],
           "constrain_angle": true,
           "gravity_scale": 0,
           "is_sensor": true
