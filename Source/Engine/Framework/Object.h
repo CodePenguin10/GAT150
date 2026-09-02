@@ -22,6 +22,7 @@ namespace nu
 		{
 			JSON_READ_NAME(value, "name", m_name);
 			JSON_READ_NAME(value, "active", m_active);
+
 		}
 
 	protected:

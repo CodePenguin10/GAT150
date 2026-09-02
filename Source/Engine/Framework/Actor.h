@@ -46,6 +46,7 @@ namespace nu
         const Transform& GetTransform() const { return m_transform; }
         void SetTransform(const Transform& transform) { m_transform = transform; }
         void SetPosition(const Vector2& position) { m_transform.position = position; }
+		const Vector2& GetPosition() const { return m_transform.position; }
         void SetRotation(float rotation) { m_transform.rotation = rotation; }
         void SetScale(float scale) { m_transform.scale = scale; }
         void SetTag(std::string tag) { m_tag = tag; }

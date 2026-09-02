@@ -11,7 +11,7 @@
       "speed": 750.0,
       "damping": 2.0,
       "transform": {
-        "position": [ 640.0, 512.0 ],
+        "position": [ 0.0, 0.0 ],
         "rotation": 0.0,
         "scale": 3.0
       },
