@@ -44,7 +44,13 @@
     <ClInclude Include="SpriteGame\SpriteGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Build\Assets\SpaceGame\Animations\bat_idle.json" />
+    <None Include="..\..\Build\Assets\SpaceGame\Data\data.json" />
+    <None Include="..\..\Build\Assets\SpaceGame\Tilemaps\world.json" />
     <None Include="..\..\Build\Assets\SpriteGame\Animations\bat_idle.json" />
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_attack.json" />
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_idle.json" />
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_run.json" />
     <None Include="..\..\Build\Assets\SpriteGame\Data\scene.json" />
     <None Include="..\..\Build\Assets\SpriteGame\Tilemaps\world.json" />
   </ItemGroup>

@@ -8,23 +8,38 @@
     <Filter Include="Header Files">
       <UniqueIdentifier>{77661e0e-c5c7-4276-8ca9-9a0db009bd44}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{010126b6-d93c-4484-9bcb-cd3b11c15469}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Scenes">
-      <UniqueIdentifier>{fb7fdfe1-2c54-4dc0-898d-e35e9ae4c355}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Animation">
-      <UniqueIdentifier>{8050f4ea-1216-48a1-ba0c-20223993a07d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\Tilemaps">
-      <UniqueIdentifier>{6a6a7637-7659-4511-ac03-612924723bf6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="SpaceGame">
       <UniqueIdentifier>{1da2bbdf-3074-48de-8a0f-707dcfa3978e}</UniqueIdentifier>
     </Filter>
     <Filter Include="SpriteGame">
       <UniqueIdentifier>{95bc4235-01c8-478b-9b3c-17aec949e1ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{010126b6-d93c-4484-9bcb-cd3b11c15469}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpaceGame">
+      <UniqueIdentifier>{3c676df2-5804-40df-81c4-aa9d1dfb9cef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpaceGame\Animation">
+      <UniqueIdentifier>{8050f4ea-1216-48a1-ba0c-20223993a07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpaceGame\Scenes">
+      <UniqueIdentifier>{fb7fdfe1-2c54-4dc0-898d-e35e9ae4c355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpaceGame\Tilemaps">
+      <UniqueIdentifier>{6a6a7637-7659-4511-ac03-612924723bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpriteGame">
+      <UniqueIdentifier>{29a22467-7728-4e9f-91b0-bbe063fbdae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpriteGame\Animations">
+      <UniqueIdentifier>{898d14f6-2caa-411c-8858-39466228ad27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpriteGame\Scenes">
+      <UniqueIdentifier>{c6f622eb-6dfb-4164-9a25-6086df8688e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\SpriteGame\Tilemaps">
+      <UniqueIdentifier>{4f349a2d-3df8-4aaa-85c3-c817a23fd2b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,14 +93,32 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Build\Assets\SpriteGame\Data\scene.json">
-      <Filter>Resource Files\Scenes</Filter>
+    <None Include="..\..\Build\Assets\SpaceGame\Animations\bat_idle.json">
+      <Filter>Assets\SpaceGame\Animation</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpaceGame\Data\data.json">
+      <Filter>Assets\SpaceGame\Scenes</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpaceGame\Tilemaps\world.json">
+      <Filter>Assets\SpaceGame\Tilemaps</Filter>
     </None>
     <None Include="..\..\Build\Assets\SpriteGame\Animations\bat_idle.json">
-      <Filter>Resource Files\Animation</Filter>
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Data\scene.json">
+      <Filter>Assets\SpriteGame\Scenes</Filter>
     </None>
     <None Include="..\..\Build\Assets\SpriteGame\Tilemaps\world.json">
-      <Filter>Resource Files\Tilemaps</Filter>
+      <Filter>Assets\SpriteGame\Tilemaps</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_run.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_attack.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
+    </None>
+    <None Include="..\..\Build\Assets\SpriteGame\Animations\Hero_idle.json">
+      <Filter>Assets\SpriteGame\Animations</Filter>
     </None>
   </ItemGroup>
 </Project>

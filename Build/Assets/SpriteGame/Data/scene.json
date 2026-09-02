@@ -1,12 +1,80 @@
 {
   "actors": [
     {
+          "type": "Actor",
+          "prototype": false,
+          "name": "Tilemap",
+          "tag": "Ground",
+          "active": true,
+          "persistent": false,
+          "transform": {
+            "position": [ 0.0, 0.0 ],
+            "rotation": 0.0,
+            "scale": 4.0
+          },
+          "components": [
+            {
+              "type": "TilemapRendererComponent",
+              "tilemap_name": "tilemaps/world.json"
+            }
+          ]
+        },
+        {
+          "type": "Actor",
+          "prototype": true,
+          "name": "CratePrototype",
+          "tag": "Prop",
+          "active": true,
+          "transform": {
+            "position": [ 0.0, 0.0 ],
+            "rotation": 0.0,
+            "scale": 1.0
+          },
+          "components": [
+            {
+              "type": "SpriteRendererComponent",
+              "texture": "textures/crate03.png"
+            },
+            {
+              "type": "Box2DPhysicsComponent",
+              "linear_damping": 2.0,
+              "angular_damping": 2.0,
+              "size": [ 100, 100 ],
+              "gravity_scale": 1
+            }
+          ]
+        },
+        {
+          "type": "CratePrototype",
+          "prototype": false,
+          "name": "Crate",
+          "tag": "Prop",
+          "active": true,
+          "transform": {
+            "position": [ 340, 612 ],
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        {
+          "type": "CratePrototype",
+          "prototype": false,
+          "name": "Crate",
+          "tag": "Prop",
+          "active": true,
+          "transform": {
+            "position": [ 640, 412 ],
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+    {
       "type": "Actor",
       "prototype": false,
       "name": "Bat",
       "tag": "Enemy",
       "active": true,
-      "persistent":  true,
+      "persistent": true,
       "transform": {
         "position": [ 200.0, 200.0 ],
         "rotation": 0.0,
@@ -14,11 +82,30 @@
       },
       "components": [
         {
-          "type": "SpriteAnimationRendererComponent",
-          "texture_frames": "animations/bat_idle.json",
-          "frames_per_second": 10,
-          "loop": true
-        }
+          "type": "SpriteAnimatorRendererComponent",
+          "default_animation": "Idle",
+          "animations": [
+            {
+              "name": "Idle",
+              "texture_frames": "animations/Hero_idle.json",
+              "frames_per_second": 10,
+              "loop": true
+            },
+            {
+              "name": "Run",
+              "texture_frames": "animations/Hero_run.json",
+              "frames_per_second": 10,
+              "loop": true
+            }
+          ]
+        },
+          {
+            "type": "Box2DPhysicsComponent",
+            "linear_damping": 2.0,
+            "angular_damping": 2.0,
+            "size": [ 48, 48 ],
+            "gravity_scale": 3
+          }
       ]
     },
 
@@ -45,7 +132,7 @@
           "linear_damping": 2.0,
           "angular_damping": 2.0,
           "size": [ 48, 48 ],
-          "gravity_scale":  0
+          "gravity_scale": 0
         }
       ]
     },
@@ -103,7 +190,7 @@
           "angular_damping": 2.0,
           "size": [ 48, 48 ],
           "gravity_scale": 0,
-          "is_sensor":  true
+          "is_sensor": true
         }
       ]
     }

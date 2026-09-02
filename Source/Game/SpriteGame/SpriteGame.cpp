@@ -1,5 +1,6 @@
 #include "SpriteGame.h"
 #include "Engine.h"
+
 #include <memory>
 
 using namespace nu;
@@ -13,10 +14,9 @@ bool SpriteGame::Initialize()
 	m_scene = std::make_unique<Scene>();
 	m_scene->SetGame(this);
 	m_scene->Load("data/scene.json");
-	m_scene->Load("tilemaps/world.json");
 
 	m_titleText = new Text(Resources().GetWithID<Font>("title_font", "fonts/Private Teacher.ttf", 128.0f));
-	m_titleText->Create(Engine::Get().GetRenderer(), "Some Space Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
+	m_titleText->Create(Engine::Get().GetRenderer(), "Some Sprite Game IG", nu::Color{ 1.0f, 1.0f, 1.0f });
 
 	m_scoreText = new Text(Resources().GetWithID<Font>("game_font", "fonts/Private Teacher.ttf", 32.0f));
 	m_livesText = new Text(Resources().Get<Font>("game_font", 32.0f));

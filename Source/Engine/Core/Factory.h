@@ -120,6 +120,8 @@ namespace nu
             return std::unique_ptr<T>();
         }
 
+		std::cout << "Object created: " << name << std::endl;
+
         auto iter = m_registry.find(lowerName);
 
         // create unique ptr to object
