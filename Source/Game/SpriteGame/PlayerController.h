@@ -4,7 +4,7 @@
 namespace nu
 {
 	class PhysicsComponent;
-	class SpriteAnimationRendererComponent;
+	class SpriteAnimatorRendererComponent;
 }
 
 class PlayerController : public nu::Actor
@@ -21,6 +21,6 @@ public:
 
 protected:
 	nu::PhysicsComponent* m_physicsComponent = nullptr;
-	nu::SpriteAnimationRendererComponent* m_rendererComponent = nullptr;
+	nu::SpriteAnimatorRendererComponent* m_rendererComponent = nullptr;
 };
 

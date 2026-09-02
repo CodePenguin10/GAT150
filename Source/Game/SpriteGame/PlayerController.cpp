@@ -1,6 +1,6 @@
 #include "PlayerController.h"
 #include "Components/PhysicsComponent.h"
-#include "Components/SpriteAnimationRendererComponent.h"
+#include "Components/SpriteAnimatorRendererComponent.h"
 #include "Core/Factory.h"
 #include "Engine.h"
 
@@ -14,7 +14,7 @@ void PlayerController::Start()
 
 	m_physicsComponent = GetComponent<PhysicsComponent>();
 	assert(m_physicsComponent);
-	m_rendererComponent = GetComponent<SpriteAnimationRendererComponent>();
+	m_rendererComponent = GetComponent<SpriteAnimatorRendererComponent>();
 	assert(m_rendererComponent);
 }
 
@@ -27,13 +27,19 @@ void PlayerController::Update(float dt)
 	if (Engine::Get().GetInput().GetKeyDown(SDL_SCANCODE_D)) dir = 1.0f;
 	if (Engine::Get().GetInput().GetKeyPressed(SDL_SCANCODE_SPACE))
 	{
-		velocity.y = -100.0f;
+		velocity.y = -800.0f;
 	}
 
 	if (dir != 0)
 	{
 		velocity.x = dir * 100.0f;
+		m_rendererComponent->Play("Run");
 	}
+	else
+	{
+		m_rendererComponent->Play("Idle");
+	}
+	m_rendererComponent->SetFlipH(dir < 0);
 
 	m_physicsComponent->SetVelocity(velocity);
 	Engine::Get().GetRenderer().SetCamera(m_physicsComponent->GetPosition());
@@ -48,5 +54,5 @@ void PlayerController::OnCollision(Actor* other)
 
 void PlayerController::Read(const nu::json::value_t& value)
 {
-
+	Actor::Read(value);
 }

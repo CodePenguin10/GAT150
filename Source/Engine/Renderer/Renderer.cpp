@@ -135,14 +135,14 @@ namespace nu
     {
         Vector2 size = texture.GetSize();
 
-		float camerax = (m_cameraEnabled) ? m_camera.x - m_width  : 0.0f;
-		float cameray = (m_cameraEnabled) ? m_camera.y - m_height : 0.0f;
+        float camerax = (m_cameraEnabled) ? (m_camera.x - m_width * 0.5f) : 0.0f;
+		float cameray = (m_cameraEnabled) ? (m_camera.y - m_height * 0.5f ) : 0.0f;
 
         SDL_FRect destRect;
         destRect.w = size.x * scale;
         destRect.h = size.y * scale;
 
-        destRect.x = (x - camerax) - (destRect.w *0.5f);
+        destRect.x = (x - camerax) - (destRect.w * 0.5f);
         destRect.y = (y - cameray) - (destRect.h * 0.5f);
 
 		SDL_RenderTextureRotated(m_renderer, texture.m_texture, NULL, &destRect, angle, NULL, (flipH) ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE);
@@ -150,8 +150,8 @@ namespace nu
 
     void Renderer::DrawTexture(const Texture& texture, const Rect& source, float x, float y, float angle, float scale, bool flipH) const
     {
-        float camerax = (m_cameraEnabled) ? m_camera.x : 0.0f;
-        float cameray = (m_cameraEnabled) ? m_camera.y : 0.0f;
+        float camerax = (m_cameraEnabled) ? (m_camera.x - m_width * 0.5f) : 0.0f;
+        float cameray = (m_cameraEnabled) ? (m_camera.y - m_height * 0.5f) : 0.0f;
 
         SDL_FRect sourceRect;
         sourceRect.x = source.x;

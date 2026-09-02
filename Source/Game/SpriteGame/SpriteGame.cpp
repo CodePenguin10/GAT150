@@ -49,6 +49,7 @@ void SpriteGame::Update(float dt)
 		if (m_stateTimer <= 0)
 		{
 			m_scene->RemoveAllActors();
+			m_scene->Load("data/level.json");
 			SpawnPlayer();
 			m_gameState = GameState::Game;
 		}
@@ -135,4 +136,7 @@ void SpriteGame::SpawnEnemy()
 	auto actor = Factory::Instance().Create<Actor>("EnemyPrototype");
 	actor->SetPosition({ RandomFloat(1024.0f), RandomFloat(800.0f) });
 	m_scene->AddActor(std::move(actor));
+	auto actor2 = Factory::Instance().Create<Actor>("FlyingEnemyPrototype");
+	actor2->SetPosition({ RandomFloat(1024.0f), RandomFloat(800.0f) });
+	m_scene->AddActor(std::move(actor2));
 }

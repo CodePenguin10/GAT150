@@ -7,10 +7,10 @@ namespace nu
 	class SpriteAnimatorRendererComponent;
 }
 
-class EnemyController : public nu::Actor
+class FlyingEnemyController : public nu::Actor
 {
 public:
-	CLASS_PROTOTYPE(EnemyController)
+	CLASS_PROTOTYPE(FlyingEnemyController)
 
 	void Start() override;
 	void Update(float dt) override;
