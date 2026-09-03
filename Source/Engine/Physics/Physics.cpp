@@ -22,7 +22,7 @@ namespace nu
 
 	void Physics::Update(float dt)
 	{
-		b2World_Step(m_worldId, 1.0f / 60.0f, 4);
+		b2World_Step(m_worldId, 1.0f / 30.0f, 4);
 		ProcessCollisionEvents();
 	}
 

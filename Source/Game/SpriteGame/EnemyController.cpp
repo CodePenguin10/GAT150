@@ -56,12 +56,21 @@ void EnemyController::Update(float dt)
 			m_rendererComponent->Play("Idle");
 		}
 		m_rendererComponent->SetFlipH(dir < 0);
-
 	}
 		break;
 	case CharacterBase::State::Attack:
+		if (m_rendererComponent->IsAnimationDone())
+		{
+			m_state = State::Move;
+			m_rendererComponent->Play("Idle");
+		}
 		break;
 	case CharacterBase::State::Hit:
+		if (m_rendererComponent->IsAnimationDone())
+		{
+			m_state = State::Move;
+			m_rendererComponent->Play("Idle");
+		}
 		break;
 	case CharacterBase::State::Death:
 		break;
@@ -97,6 +106,18 @@ void EnemyController::OnCollision(Actor* other)
 		{
 			SetDestroyed();
 		}
+	}
+
+	if (other->GetTag() == "Player")
+	{
+		m_rendererComponent->Play("Attack");
+		m_state = State::Attack;
+
+		auto damager = Factory::Instance().Create<Damager>("DamagerPrototype");
+		damager->SetDamage(5.0f);
+		damager->SetPosition(GetTransform().position + Vector2{ 20.0f, 0.0f });
+		damager->SetTag("EnemyDamager");
+		m_scene->AddActor(std::move(damager));
 	}
 }
 

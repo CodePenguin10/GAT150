@@ -25,7 +25,7 @@ namespace nu
 
 	void Box2DPhysicsComponent::Update(float dt)
 	{
-		GetOwner()->SetPosition(GetOwner()->GetPosition());
+		GetOwner()->SetPosition(GetPosition());
 		GetOwner()->SetRotation(GetRotation() * RadToDeg);
 	}
 

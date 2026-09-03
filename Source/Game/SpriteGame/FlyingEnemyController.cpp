@@ -60,6 +60,11 @@ void FlyingEnemyController::Update(float dt)
 			}
 			break;
 		case CharacterBase::State::Hit:
+			if (m_rendererComponent->IsAnimationDone())
+			{
+				m_state = State::Move;
+				m_rendererComponent->Play("Idle");
+			}
 			break;
 		case CharacterBase::State::Death:
 			break;
