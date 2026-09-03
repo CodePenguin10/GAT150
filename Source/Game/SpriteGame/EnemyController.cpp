@@ -88,8 +88,6 @@ void EnemyController::OnCollision(Actor* other)
 {
 	if (other->GetTag() == "PlayerDamager")
 	{
-		other->SetDestroyed();
-
 		m_state = State::Hit;
 		m_rendererComponent->Play("Hit");
 		Damager* damager = dynamic_cast<Damager*>(other);
@@ -120,6 +118,7 @@ void EnemyController::OnCollision(Actor* other)
 		m_scene->AddActor(std::move(damager));
 	}
 }
+
 
 void EnemyController::Read(const nu::json::value_t& value)
 {

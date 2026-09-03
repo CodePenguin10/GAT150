@@ -79,8 +79,6 @@ void FlyingEnemyController::OnCollision(Actor* other)
 {
 	if (other->GetTag() == "PlayerDamager")
 	{
-		other->SetDestroyed();
-
 		m_state = State::Hit;
 		m_rendererComponent->Play("Hit");
 		Damager* damager = dynamic_cast<Damager*>(other);
